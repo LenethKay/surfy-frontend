@@ -1,7 +1,7 @@
 const asset = (filename) => `/assets/${filename}`;
 
 export const ASSETS = Object.freeze({
-  waveBorder: asset('wave-border.png'),
+  waveBorder: asset('Headbanner.png'),
   waveFoam: asset('1.png'),
   bubble: asset('2.png'),
   waveCap: asset('orange-cap.png'),

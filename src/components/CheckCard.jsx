@@ -40,9 +40,9 @@ export default function CheckCard({
   isAnalyzing,
   status,
   isAskOpen,
+  isAskClosing,
+  isAskThinking,
   askMessages,
-  onAskOpen,
-  onAskClose,
   onAskSend,
   feedbackDialog,
   t,
@@ -106,7 +106,7 @@ export default function CheckCard({
         </div>
 
         <div className="check-columns">
-          <div className="check-input-column">
+          <div className={`check-input-column${isAskOpen ? ' has-ask' : ''}`}>
             <div className="input-card">
               <div className="check-tabs" role="tablist" aria-label={t('check.tabs.label')}>
                 {TABS.map(({ id: tabId, Icon }, index) => (
@@ -164,7 +164,6 @@ export default function CheckCard({
                           placeholder={t('check.text.placeholder')}
                           onChange={(event) => onInputChange('message', event.target.value)}
                           aria-describedby={`${id}-message-help`}
-                          disabled={isAskOpen}
                         />
                         <div className="field-meta">
                           <p className="field-help" id={`${id}-message-help`}>
@@ -188,7 +187,6 @@ export default function CheckCard({
                           onChange={(event) => onInputChange('url', event.target.value)}
                           onBlur={() => onInputChange('url', inputs.url.trim())}
                           aria-describedby={`${id}-url-help`}
-                          disabled={isAskOpen}
                         />
                         <p className="field-help" id={`${id}-url-help`}>{t('check.link.privacy')}</p>
                       </div>
@@ -204,7 +202,7 @@ export default function CheckCard({
                           onDragOver={(event) => event.preventDefault()}
                           onDrop={(event) => {
                             event.preventDefault();
-                            if (!isAskOpen) selectFile(event.dataTransfer.files?.[0], activeTab);
+                            selectFile(event.dataTransfer.files?.[0], activeTab);
                           }}
                         >
                           {activeTab === 'qr' ? <QrCode aria-hidden="true" /> : <Upload aria-hidden="true" />}
@@ -220,7 +218,6 @@ export default function CheckCard({
                             type="file"
                             accept="image/png,image/jpeg,image/webp"
                             aria-label={t(activeTab === 'image' ? 'check.image.choose' : 'check.qr.choose')}
-                            disabled={isAskOpen}
                             onChange={(event) => {
                               selectFile(event.target.files?.[0], activeTab);
                               event.target.value = '';
@@ -246,7 +243,6 @@ export default function CheckCard({
                         <button
                           className="camera-button"
                           type="button"
-                          disabled={isAskOpen}
                           onClick={() => onCamera(activeTab)}
                         >
                           <Camera aria-hidden="true" />
@@ -262,7 +258,7 @@ export default function CheckCard({
                   <button
                     className="check-button"
                     type="button"
-                    disabled={!canCheck || isAnalyzing || (isAskOpen && status === 'analyzing')}
+                    disabled={!canCheck}
                     onClick={onCheck}
                   >
                     <ShieldCheck aria-hidden="true" />
@@ -275,14 +271,23 @@ export default function CheckCard({
 
             <div className="golden-rules" aria-live="polite">
               <p>{t('check.rules.label')}</p>
-              <h3 key={ruleIndex}>{t(['check.rules.first', 'check.rules.second', 'check.rules.third'][ruleIndex])}</h3>
+              <div className="golden-rules-headline">
+                <h3 key={ruleIndex}>{t(['check.rules.first', 'check.rules.second', 'check.rules.third'][ruleIndex])}</h3>
+                <span className="golden-rules-rule" aria-hidden="true" />
+              </div>
             </div>
 
-            {status === 'result' && !isAskOpen && (
-              <button className="ask-launch-button" type="button" onClick={onAskOpen}>
-                <img src={ASSETS.surfyWink} alt="" width="28" height="28" />
-                {t('ask.button')}
-              </button>
+            {isAskOpen && (
+              <div className="ask-panel-position">
+                <AskSurfy
+                  isOpen={isAskOpen}
+                  isClosing={isAskClosing}
+                  isThinking={isAskThinking}
+                  messages={askMessages}
+                  onSend={onAskSend}
+                  t={t}
+                />
+              </div>
             )}
           </div>
 
@@ -297,17 +302,6 @@ export default function CheckCard({
           </div>
         </div>
 
-        {isAskOpen && (
-          <div className="ask-panel-position">
-            <AskSurfy
-              isOpen={isAskOpen}
-              messages={askMessages}
-              onClose={onAskClose}
-              onSend={onAskSend}
-              t={t}
-            />
-          </div>
-        )}
         {feedbackDialog}
       </div>
     </section>

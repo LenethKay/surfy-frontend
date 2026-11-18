@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import emailjs from '@emailjs/browser';
 import { ChevronDown, X } from 'lucide-react';
 
@@ -170,7 +171,7 @@ export default function FeedbackModal({ isOpen, initialType, onClose, t }) {
     }
   };
 
-  return (
+  return createPortal(
     <div className="feedback-catcher">
       <section
         className="feedback-dialog"
@@ -403,6 +404,7 @@ export default function FeedbackModal({ isOpen, initialType, onClose, t }) {
           </div>
         )}
       </section>
-    </div>
+    </div>,
+    document.body,
   );
 }

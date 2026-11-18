@@ -1,10 +1,10 @@
 export const SURFY_QUESTION_KEYS = [
   'ask.why',
   'ask.next',
-  'ask.link',
   'ask.offline',
   'ask.photo',
   'ask.uncertain',
+  'ask.link',
 ];
 
 const QUESTION_MATCHERS = [

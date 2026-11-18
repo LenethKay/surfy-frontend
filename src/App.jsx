@@ -62,6 +62,17 @@ const DEMO_CASES = {
       'result.unknown.reason.noSignals',
     ],
   },
+  'ask-chat': {
+    tab: 'text',
+    message: 'Your GCash account will be blocked today. Send your OTP now to keep access.',
+    level: 'suspicious',
+    score: 6,
+    signals: [
+      { id: 'urgency', severity: 2, weight: 2 },
+      { id: 'otp_request', severity: 3, weight: 4 },
+      { id: 'credential_request', severity: 3, weight: 3 },
+    ],
+  },
   links: {
     tab: 'links',
     inputs: { url: 'gcash.login-example.xyz/verify' },
@@ -138,11 +149,23 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [errorKey, setErrorKey] = useState('');
   const [isAskOpen, setIsAskOpen] = useState(false);
+  const [isAskClosing, setIsAskClosing] = useState(false);
+  const [isAskThinking, setIsAskThinking] = useState(false);
   const [askMessages, setAskMessages] = useState([]);
   const [feedbackType, setFeedbackType] = useState('text');
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [cameraTarget, setCameraTarget] = useState('');
   const askOpenTimer = useRef(null);
+  const askCloseTimer = useRef(null);
+  const askAnswerTimer = useRef(null);
+  const askAnswerQueue = useRef([]);
+  const checkRunId = useRef(0);
+
+  useEffect(() => () => {
+    window.clearTimeout(askOpenTimer.current);
+    window.clearTimeout(askCloseTimer.current);
+    window.clearTimeout(askAnswerTimer.current);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -230,9 +253,17 @@ export default function App() {
     }
     setResult(result);
     if (!scenario.errorKey) setStatus('result');
-    if (demo === 'ask' || demo === 'autoask') {
+    if (demo === 'ask' || demo === 'autoask' || demo === 'ask-chat') {
       const count = scenario.signals.filter((signal) => signal.id !== 'online_match').length;
-      setAskMessages([{ role: 'surfy', text: t('ask.greeting', { count }) }]);
+      const greeting = { role: 'surfy', text: t('ask.greeting', { count }) };
+      setAskMessages(demo === 'ask-chat'
+        ? [
+          greeting,
+          { role: 'user', text: t('ask.why') },
+          { role: 'surfy', text: t('result.explanation.suspicious') },
+          { role: 'user', text: t('ask.next') },
+        ]
+        : [greeting]);
       setIsAskOpen(true);
     }
     if (demo === 'feedback') {
@@ -246,16 +277,18 @@ export default function App() {
   }, []);
 
   const handleCheck = async () => {
-    if (status === 'analyzing') return;
-    window.clearTimeout(askOpenTimer.current);
-    setIsAskOpen(false);
-    askOpenTimer.current = window.setTimeout(() => setIsAskOpen(true), 150);
+    const runId = ++checkRunId.current;
+    window.clearTimeout(askCloseTimer.current);
+    setIsAskClosing(false);
+    if (!isAskOpen) {
+      window.clearTimeout(askOpenTimer.current);
+      askOpenTimer.current = window.setTimeout(() => setIsAskOpen(true), 150);
+    }
     setStatus('analyzing');
-    setResult(null);
     setErrorKey('');
-    setAskMessages([]);
     try {
       const analysis = await analyzeInput(activeTab, inputs, { onlineLookup: !offlineOnly });
+      if (runId !== checkRunId.current) return;
       if (analysis.errorKey) {
         setErrorKey(analysis.errorKey);
         setResult(analysis);
@@ -265,8 +298,13 @@ export default function App() {
       setResult(analysis);
       setStatus('result');
       const warningCount = analysis.signals.filter((signal) => signal.id !== 'online_match').length;
-      setAskMessages([{ role: 'surfy', text: t('ask.greeting', { count: warningCount }) }]);
+      setAskMessages((previous) => [
+        ...previous,
+        ...(previous.length ? [{ role: 'divider', text: t('ask.newResult') }] : []),
+        { role: 'surfy', text: t('ask.greeting', { count: warningCount }) },
+      ]);
     } catch (error) {
+      if (runId !== checkRunId.current) return;
       console.error('Analysis failed:', error);
       const errorKeys = {
         file_empty: 'error.file_empty',
@@ -281,7 +319,12 @@ export default function App() {
   };
 
   const reset = useCallback(() => {
+    checkRunId.current += 1;
     window.clearTimeout(askOpenTimer.current);
+    window.clearTimeout(askCloseTimer.current);
+    window.clearTimeout(askAnswerTimer.current);
+    askAnswerTimer.current = null;
+    askAnswerQueue.current = [];
     setActiveTab('text');
     setInputs({ message: '', url: '', image: null, qr: null, qrValue: '' });
     setStatus('idle');
@@ -289,16 +332,26 @@ export default function App() {
     setErrorKey('');
     setAskMessages([]);
     setIsAskOpen(false);
+    setIsAskClosing(false);
+    setIsAskThinking(false);
   }, []);
 
+  const scheduleAskAnswer = useCallback(() => {
+    if (askAnswerTimer.current || !askAnswerQueue.current.length) return;
+    const answer = askAnswerQueue.current.shift();
+    setIsAskThinking(true);
+    askAnswerTimer.current = window.setTimeout(() => {
+      askAnswerTimer.current = null;
+      setAskMessages((previous) => [...previous, { role: 'surfy', text: answer }]);
+      if (askAnswerQueue.current.length) scheduleAskAnswer();
+      else setIsAskThinking(false);
+    }, 600);
+  }, []);
   const handleAskSend = useCallback((question) => {
-    const answer = getSurfyAnswer(question, result, t);
-    setAskMessages((previous) => [
-      ...previous,
-      { role: 'user', text: question },
-      { role: 'surfy', text: answer },
-    ]);
-  }, [result, t]);
+    setAskMessages((previous) => [...previous, { role: 'user', text: question }]);
+    askAnswerQueue.current.push(getSurfyAnswer(question, result, t));
+    scheduleAskAnswer();
+  }, [result, scheduleAskAnswer, t]);
 
   const openFeedback = useCallback((type = activeTab) => {
     setFeedbackType(type);
@@ -306,18 +359,32 @@ export default function App() {
   }, [activeTab]);
   const handleNewCheck = useCallback(() => {
     if (status === 'result') {
-      setIsAskOpen(false);
-      openFeedback(activeTab);
+      window.clearTimeout(askOpenTimer.current);
+      window.clearTimeout(askCloseTimer.current);
+      window.clearTimeout(askAnswerTimer.current);
+      askAnswerTimer.current = null;
+      askAnswerQueue.current = [];
+      setIsAskThinking(false);
+      const finishNewCheck = () => {
+        setIsAskOpen(false);
+        setIsAskClosing(false);
+        setAskMessages([]);
+        openFeedback(activeTab);
+      };
+      if (isAskOpen) {
+        setIsAskClosing(true);
+        askCloseTimer.current = window.setTimeout(finishNewCheck, 150);
+      } else {
+        finishNewCheck();
+      }
       return;
     }
     reset();
-  }, [activeTab, openFeedback, reset, status]);
+  }, [activeTab, isAskOpen, openFeedback, reset, status]);
   const closeFeedback = useCallback(() => {
     setIsFeedbackOpen(false);
     reset();
   }, [reset]);
-  const closeAsk = useCallback(() => setIsAskOpen(false), []);
-
   const camera = useMemo(
     () => (cameraTarget ? (
       <CameraModal
@@ -357,9 +424,9 @@ export default function App() {
           isAnalyzing={status === 'analyzing'}
           status={status}
           isAskOpen={isAskOpen}
+          isAskClosing={isAskClosing}
+          isAskThinking={isAskThinking}
           askMessages={askMessages}
-          onAskOpen={() => setIsAskOpen(true)}
-          onAskClose={closeAsk}
           onAskSend={handleAskSend}
           feedbackDialog={isFeedbackOpen ? (
             <FeedbackModal

@@ -34,7 +34,7 @@ export default function Navbar({
     <header className="site-header">
       <div className="nav-inner">
         <a className="brand" href="#top" aria-label={t('nav.home')}>
-          <img src={ASSETS.appIcon} alt="" width="52" height="52" decoding="async" />
+          <img src={ASSETS.appIcon} alt="" width="38" height="38" decoding="async" />
           <span>Surfare</span>
         </a>
 
