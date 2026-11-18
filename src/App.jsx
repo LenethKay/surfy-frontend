@@ -146,6 +146,7 @@ export default function App() {
     qrValue: '',
   });
   const [status, setStatus] = useState('idle');
+  const [isCheckUsed, setIsCheckUsed] = useState(false);
   const [result, setResult] = useState(null);
   const [errorKey, setErrorKey] = useState('');
   const [isAskOpen, setIsAskOpen] = useState(false);
@@ -160,6 +161,7 @@ export default function App() {
   const askAnswerTimer = useRef(null);
   const askAnswerQueue = useRef([]);
   const checkRunId = useRef(0);
+  const checkUsedRef = useRef(false);
 
   useEffect(() => () => {
     window.clearTimeout(askOpenTimer.current);
@@ -221,6 +223,8 @@ export default function App() {
     const scenarioKey = DEMO_ALIASES[demo] ?? demo;
     const scenario = DEMO_CASES[scenarioKey];
     if (!scenario) return;
+    checkUsedRef.current = !scenario.errorKey;
+    setIsCheckUsed(!scenario.errorKey);
     setActiveTab(scenario.tab);
     setInputs((previous) => ({
       ...previous,
@@ -277,6 +281,9 @@ export default function App() {
   }, []);
 
   const handleCheck = async () => {
+    if (checkUsedRef.current) return;
+    checkUsedRef.current = true;
+    setIsCheckUsed(true);
     const runId = ++checkRunId.current;
     window.clearTimeout(askCloseTimer.current);
     setIsAskClosing(false);
@@ -293,6 +300,8 @@ export default function App() {
         setErrorKey(analysis.errorKey);
         setResult(analysis);
         setStatus('error');
+        checkUsedRef.current = false;
+        setIsCheckUsed(false);
         return;
       }
       setResult(analysis);
@@ -315,11 +324,15 @@ export default function App() {
       };
       setErrorKey(errorKeys[error?.message] ?? 'error.analysis');
       setStatus('error');
+      checkUsedRef.current = false;
+      setIsCheckUsed(false);
     }
   };
 
   const reset = useCallback(() => {
     checkRunId.current += 1;
+    checkUsedRef.current = false;
+    setIsCheckUsed(false);
     window.clearTimeout(askOpenTimer.current);
     window.clearTimeout(askCloseTimer.current);
     window.clearTimeout(askAnswerTimer.current);
@@ -359,28 +372,13 @@ export default function App() {
   }, [activeTab]);
   const handleNewCheck = useCallback(() => {
     if (status === 'result') {
-      window.clearTimeout(askOpenTimer.current);
-      window.clearTimeout(askCloseTimer.current);
-      window.clearTimeout(askAnswerTimer.current);
-      askAnswerTimer.current = null;
-      askAnswerQueue.current = [];
-      setIsAskThinking(false);
-      const finishNewCheck = () => {
-        setIsAskOpen(false);
-        setIsAskClosing(false);
-        setAskMessages([]);
-        openFeedback(activeTab);
-      };
-      if (isAskOpen) {
-        setIsAskClosing(true);
-        askCloseTimer.current = window.setTimeout(finishNewCheck, 150);
-      } else {
-        finishNewCheck();
-      }
+      const previousTab = activeTab;
+      reset();
+      openFeedback(previousTab);
       return;
     }
     reset();
-  }, [activeTab, isAskOpen, openFeedback, reset, status]);
+  }, [activeTab, openFeedback, reset, status]);
   const closeFeedback = useCallback(() => {
     setIsFeedbackOpen(false);
     reset();
@@ -422,6 +420,7 @@ export default function App() {
           onReset={handleNewCheck}
           onCamera={setCameraTarget}
           isAnalyzing={status === 'analyzing'}
+          isCheckUsed={isCheckUsed}
           status={status}
           isAskOpen={isAskOpen}
           isAskClosing={isAskClosing}

@@ -76,53 +76,57 @@ try {
   };
 
   const assertGoldenRulesIdleLayout = async (width) => {
-    const layout = await page.locator('.check-input-column').evaluate((column) => {
-      const bounds = (selector) => column.querySelector(selector).getBoundingClientRect();
-      const columnBounds = column.getBoundingClientRect();
-      const inputBounds = bounds('.input-card');
-      const headline = bounds('.golden-rules h3');
-      const style = getComputedStyle(column.querySelector('.golden-rules h3'));
+    const layout = await page.locator('.check-title').evaluate((title) => {
+      const bounds = (selector) => title.querySelector(selector).getBoundingClientRect();
+      const titleBounds = title.getBoundingClientRect();
+      const rules = bounds('.golden-rules');
+      const style = getComputedStyle(title.querySelector('.golden-rules h3'));
       return {
-        horizontalOffset: (headline.left + headline.right - columnBounds.left - columnBounds.right) / 2,
-        freeAreaProgress: ((headline.top + headline.bottom) / 2 - inputBounds.bottom)
-          / (columnBounds.bottom - inputBounds.bottom),
-        textWrap: style.textWrap,
-        maxWidth: style.maxWidth,
+        withinTitle: rules.top >= titleBounds.top - 1 && rules.bottom <= titleBounds.bottom + 1,
+        fontSize: style.fontSize,
+        cardHeight: document.querySelector('.check-card').getBoundingClientRect().height,
+        resultHeight: document.querySelector('.result-panel').getBoundingClientRect().height,
       };
     });
-    if (Math.abs(layout.horizontalOffset) > 1 || layout.freeAreaProgress < 0.36
-      || layout.freeAreaProgress > 0.44 || layout.textWrap !== 'balance' || layout.maxWidth !== '460px') {
-      throw new Error(`Golden rules are not centered in the idle free space at ${width}px: ${JSON.stringify(layout)}.`);
+    const cardHeightLimit = width <= 640 ? 1100 : 700;
+    if (!layout.withinTitle || layout.fontSize !== '14px' || layout.cardHeight > cardHeightLimit
+      || layout.resultHeight >= 400) {
+      throw new Error(`The idle checker is not compact at ${width}px: ${JSON.stringify(layout)}.`);
     }
   };
 
   const assertGoldenRulesAskLayout = async (width) => {
-    const layout = await page.locator('.check-input-column').evaluate((column) => {
+    const layout = await page.locator('.check-card').evaluate((card) => {
+      const column = card.querySelector('.check-input-column');
       const bounds = (selector) => column.querySelector(selector).getBoundingClientRect();
-      const columnBounds = column.getBoundingClientRect();
-      const label = bounds('.golden-rules > p');
-      const headline = bounds('.golden-rules h3');
-      const panelPosition = column.querySelector('.ask-panel-position').getBoundingClientRect();
-      const mascot = column.querySelector('.ask-brand img').getBoundingClientRect();
-      const brand = column.querySelector('.ask-brand').getBoundingClientRect();
-      const title = column.querySelector('.ask-brand h2').getBoundingClientRect();
-      const chat = column.querySelector('.ask-content').getBoundingClientRect();
-      const panel = column.querySelector('.ask-dialog').getBoundingClientRect();
+      const label = card.querySelector('.check-title .golden-rules > p').getBoundingClientRect();
+      const headline = card.querySelector('.check-title .golden-rules h3').getBoundingClientRect();
+      const panelPosition = bounds('.ask-panel-position');
+      const mascot = bounds('.ask-brand img');
+      const brand = bounds('.ask-brand');
+      const title = bounds('.ask-brand h2');
+      const chat = bounds('.ask-content');
+      const panel = bounds('.ask-dialog');
+      const input = bounds('.input-card');
       return {
-        labelOffset: label.left - columnBounds.left,
-        headlineOffset: headline.left - columnBounds.left,
+        labelOffset: label.left - headline.left,
         labelHeadlineGap: headline.top - label.bottom,
-        panelGap: panelPosition.top - headline.bottom,
+        panelGap: panelPosition.top - input.bottom,
         mascotWidth: mascot.width,
         mascotPanelRatio: mascot.width / panel.width,
         mascotBrandCenterOffset: (mascot.left + mascot.right - brand.left - brand.right) / 2,
         mascotTitleGap: title.top - mascot.bottom,
         mascotChatGap: chat.left - mascot.right,
+        panelPositionType: getComputedStyle(card.querySelector('.ask-panel-position')).position,
+        panelInsideCard: card.contains(card.querySelector('.ask-dialog')),
+        panelBottom: panel.bottom,
+        cardBottom: card.getBoundingClientRect().bottom,
       };
     });
-    if (Math.abs(layout.labelOffset) > 1 || Math.abs(layout.headlineOffset) > 1
-      || layout.labelHeadlineGap < 3 || layout.labelHeadlineGap > 5) {
-      throw new Error(`Golden rules are not left-aligned above the headline at ${width}px: ${JSON.stringify(layout)}.`);
+    if (Math.abs(layout.labelOffset) > 1 || layout.labelHeadlineGap < 0
+      || layout.labelHeadlineGap > 5 || !layout.panelInsideCard
+      || layout.panelPositionType !== 'relative' || layout.panelBottom > layout.cardBottom + 1) {
+      throw new Error(`Golden rules or Ask Surfy are outside the checker flow at ${width}px: ${JSON.stringify(layout)}.`);
     }
     if (width > 640 && (Math.abs(layout.panelGap - 14) > 1 || layout.mascotWidth < 140
       || layout.mascotPanelRatio < 0.165 || layout.mascotPanelRatio > 0.19
@@ -175,6 +179,7 @@ try {
       radius: getComputedStyle(element).borderRadius,
       footerBorder: getComputedStyle(element.querySelector('.result-footer')).borderTopStyle,
       bodyOverflow: getComputedStyle(element.querySelector('.result-body')).overflowY,
+      height: element.getBoundingClientRect().height,
     }));
     if (foamCount !== 1 || foamInsideCard !== 1 || tabs !== 4 || riskCards !== 4) {
       throw new Error('Required checker tabs, single foam asset, or risk cards are missing.');
@@ -196,8 +201,23 @@ try {
     if (meter.indicators !== 0
       || meter.colors.join(',') !== 'rgb(189, 189, 189),rgb(158, 158, 158),rgb(140, 140, 140)'
       || !panelBackground.includes('160deg') || panelStyles.radius !== '24px'
-      || panelStyles.footerBorder !== 'none' || panelStyles.bodyOverflow !== 'auto') {
+      || panelStyles.footerBorder !== 'none' || panelStyles.bodyOverflow !== 'visible'
+      || panelStyles.height >= 400) {
       throw new Error('The idle meter or result-panel styles do not match the specification.');
+    }
+    const footer = await page.locator('.site-footer').evaluate((element) => ({
+      navLabel: element.querySelector('nav').getAttribute('aria-label'),
+      links: Array.from(element.querySelectorAll('nav a'), (link) => ({
+        href: link.getAttribute('href'),
+        hasTarget: Boolean(document.querySelector(link.getAttribute('href'))),
+        scrollMarginTop: Number.parseFloat(
+          getComputedStyle(document.querySelector(link.getAttribute('href'))).scrollMarginTop,
+        ),
+      })),
+    }));
+    if (!footer.navLabel || footer.links.length !== 6
+      || footer.links.some((link) => !link.hasTarget || link.scrollMarginTop < 96)) {
+      throw new Error(`The footer links do not all target page sections: ${JSON.stringify(footer)}.`);
     }
   };
 
@@ -220,7 +240,8 @@ try {
         howSteps: box(document.querySelector('.steps-list')),
         riskBackground: getComputedStyle(document.querySelector('.risks-section')).backgroundImage,
         riskLabelColor: getComputedStyle(document.querySelector('.risks-section .section-eyebrow')).color,
-        footerBackground: getComputedStyle(document.querySelector('.site-footer')).backgroundImage,
+        footerBackground: getComputedStyle(document.querySelector('.site-footer')).backgroundColor,
+        footerBorder: getComputedStyle(document.querySelector('.site-footer')).borderTopColor,
         grid: box(grid),
         columns: gridStyle.gridTemplateColumns.trim().split(/\s+/).length,
         cards: cards.map((card) => ({
@@ -241,8 +262,8 @@ try {
     if (layout.columns !== expectedColumns || layout.cards.length !== 4
       || !layout.riskBackground.includes('rgb(149, 193, 255)')
       || !layout.riskBackground.includes('rgb(60, 104, 204)')
-      || !layout.footerBackground.includes('rgb(60, 104, 204)')
-      || !layout.footerBackground.includes('rgb(15, 24, 141)')) {
+      || layout.footerBackground !== 'rgb(220, 230, 241)'
+      || layout.footerBorder !== 'rgb(31, 42, 119)') {
       throw new Error(`Risk layout or section gradients are incorrect at ${viewport.width}px: ${JSON.stringify(layout)}.`);
     }
     if (viewport.width === 1440
@@ -369,9 +390,17 @@ try {
           throw new Error(`Ask Surfy chips are not in the required order: ${chipLabels.join(' | ')}.`);
         }
         if (viewport.width <= 640) {
-          const sheetBounds = await panel.boundingBox();
-          if (!sheetBounds || Math.abs(sheetBounds.y + sheetBounds.height - viewport.height) > 1) {
-            throw new Error('The mobile Ask Surfy sheet should be docked to the bottom of the viewport.');
+          const flowLayout = await page.locator('.ask-panel-position').evaluate((element) => {
+            const panel = element.querySelector('.ask-dialog').getBoundingClientRect();
+            const card = document.querySelector('.check-card').getBoundingClientRect();
+            return {
+              position: getComputedStyle(element).position,
+              panelBottom: panel.bottom,
+              cardBottom: card.bottom,
+            };
+          });
+          if (flowLayout.position !== 'relative' || flowLayout.panelBottom > flowLayout.cardBottom + 1) {
+            throw new Error('The mobile Ask Surfy panel should remain inside the checker card flow.');
           }
           const collapse = page.getByRole('button', { name: 'Collapse Ask Surfy' });
           await collapse.click();
@@ -518,14 +547,26 @@ try {
   await page.getByRole('button', { name: 'Check', exact: true }).click();
   const askPanel = page.locator('.ask-dialog');
   await page.getByRole('complementary', { name: 'Ask Surfy' }).waitFor({ state: 'visible' });
-  if (await page.locator('.tab-panel textarea').isDisabled()) {
-    throw new Error('The checker input should stay enabled while Ask Surfy is open.');
+  if (!(await page.locator('.tab-panel textarea').isDisabled())) {
+    throw new Error('The checker input should lock once the check starts.');
   }
   await page.locator('.result-details').waitFor({ state: 'visible' });
-  await page.locator('.tab-panel textarea').click();
-  await page.getByRole('tab', { name: 'Links' }).click();
+  const lockedControls = await page.evaluate(() => ({
+    checkDisabled: document.querySelector('.check-button').disabled,
+    checkAriaDisabled: document.querySelector('.check-button').getAttribute('aria-disabled'),
+    tabsDisabled: Array.from(document.querySelectorAll('.check-tab'), (tab) => tab.disabled),
+    inputDisabled: document.querySelector('.tab-panel textarea').disabled,
+  }));
+  if (!lockedControls.checkDisabled || lockedControls.checkAriaDisabled !== 'true'
+    || !lockedControls.inputDisabled || lockedControls.tabsDisabled.some((disabled) => !disabled)) {
+    throw new Error(`The completed check did not lock the checker controls: ${JSON.stringify(lockedControls)}.`);
+  }
+  await page.getByRole('tab', { name: 'Links' }).dispatchEvent('click');
+  await page.getByRole('tab', { name: 'Links' }).dispatchEvent('keydown', { key: 'ArrowRight', bubbles: true });
+  if (await page.getByRole('tab', { name: 'Text' }).getAttribute('aria-selected') !== 'true') {
+    throw new Error('A locked tab could still change the active checker input.');
+  }
   if (await askPanel.count() !== 1) throw new Error('Switching tabs closed Ask Surfy.');
-  await page.getByRole('tab', { name: 'Text' }).click();
   await page.locator('select[aria-label="Choose language"]').selectOption('tl');
   await page.locator('html[lang="fil"]').waitFor();
   if (await askPanel.count() !== 1) throw new Error('Changing language closed Ask Surfy.');
@@ -537,16 +578,16 @@ try {
   await page.keyboard.press('Escape');
   if (await askPanel.count() !== 1) throw new Error('Clicking the result or pressing Escape closed Ask Surfy.');
 
-  await page.getByRole('button', { name: 'Check', exact: true }).click();
-  await page.locator('.ask-result-divider').waitFor({ state: 'visible' });
-  if (await askPanel.count() !== 1
-    || await page.locator('.chat-bubble.chat-surfy').count() < 2) {
-    throw new Error('Rechecking should keep Ask Surfy open and append a new result summary.');
-  }
-  await page.screenshot({
-    path: path.join(outputDirectory, '1440-ask-rechecked.png'),
-    animations: 'disabled',
+  await page.locator('.check-button').evaluate((button) => {
+    const click = () => button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    click();
+    click();
   });
+  await page.waitForTimeout(700);
+  if (await askPanel.count() !== 1 || await page.locator('.ask-result-divider').count() !== 0
+    || await page.locator('.chat-bubble.chat-surfy').count() !== 1) {
+    throw new Error('Repeated Check events should not start another analysis or online lookup.');
+  }
 
   const askInput = page.locator('#ask-input');
   await askInput.fill('Why was this flagged?');
@@ -574,12 +615,52 @@ try {
   if (await askPanel.count() !== 0 || await page.locator('.ask-messages').count() !== 0) {
     throw new Error('New Check should close Ask Surfy and clear its conversation before feedback.');
   }
+  if ((await page.locator('.tab-panel textarea').inputValue()) !== ''
+    || await page.locator('.result-details').count() !== 0) {
+    throw new Error('New Check should reset the checker card before feedback.');
+  }
   if (await feedbackDialog.getAttribute('aria-modal') !== 'true') {
     throw new Error('Feedback should use a modal dialog.');
   }
   await page.getByRole('button', { name: 'Skip' }).click();
   if ((await page.locator('.tab-panel textarea').inputValue()) !== '') {
     throw new Error('Skipping feedback should reset the current check.');
+  }
+  if (await page.locator('.tab-panel textarea').isDisabled()
+    || await page.locator('.check-button').getAttribute('aria-disabled') !== 'true') {
+    throw new Error('New Check should unlock inputs while keeping Check disabled for empty input.');
+  }
+  await page.locator('.tab-panel textarea').fill('A fresh check can be started.');
+  if (await page.locator('.check-button').isDisabled()
+    || await page.locator('.check-button').getAttribute('aria-disabled') !== 'false') {
+    throw new Error('New Check did not re-enable Check for new input.');
+  }
+
+  await page.getByRole('tab', { name: 'Image' }).click();
+  await page.locator('input[type="file"]').setInputFiles({
+    name: 'invalid.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from('not an image'),
+  });
+  const analysisErrorIndex = errors.length;
+  await page.getByRole('button', { name: 'Check', exact: true }).click();
+  await page.locator('.result-error[role="alert"]').waitFor({ state: 'visible' });
+  const analysisErrors = errors.splice(analysisErrorIndex);
+  const expectedAnalysisError = analysisErrors.find((message) =>
+    message.includes('Analysis failed:') && message.includes('file_unsupported'));
+  if (!expectedAnalysisError) {
+    throw new Error(`The invalid image did not surface the expected analysis error: ${analysisErrors.join('\n')}.`);
+  }
+  errors.push(...analysisErrors.filter((message) => message !== expectedAnalysisError));
+  if (await page.locator('.check-button').isDisabled()
+    || await page.locator('.check-button').getAttribute('aria-disabled') !== 'false'
+    || await page.locator('input[type="file"]').isDisabled()) {
+    throw new Error('A failed check should unlock the button and inputs for retry.');
+  }
+  await page.getByRole('button', { name: 'New Check' }).click();
+  if (await page.locator('.tab-panel textarea').isDisabled()
+    || await page.locator('.tab-panel textarea').inputValue() !== '') {
+    throw new Error('New Check should clear and unlock the checker after an error.');
   }
 
   if (errors.length) throw new Error(`Browser console errors:\n${errors.join('\n')}`);

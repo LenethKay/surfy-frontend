@@ -8261,3 +8261,289 @@ html {
     object-fit: contain;
   }
 }
+
+.check-section,
+.hero,
+.how-section,
+.risks-section,
+#golden-rules,
+#privacy {
+  scroll-margin-top: 96px;
+}
+
+.check-card {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  transition: height 360ms ease;
+}
+
+.check-columns {
+  align-items: start;
+  gap: 28px;
+}
+
+.check-input-column {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.check-title .golden-rules {
+  position: static;
+  inset: auto;
+  display: flex;
+  width: auto;
+  max-width: 230px;
+  min-height: 0;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.check-title .golden-rules p {
+  margin: 0 0 2px;
+  color: #b75b2e;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.check-title .golden-rules-headline {
+  width: auto;
+  max-width: 100%;
+}
+
+.check-title .golden-rules h3 {
+  color: #d7672e;
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+.check-result-column {
+  min-width: 0;
+}
+
+.result-panel {
+  height: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.result-content {
+  height: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+}
+
+.result-body {
+  height: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.result-empty {
+  margin: 12px auto 0;
+}
+
+.ask-panel-position {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+  max-height: 360px;
+  flex: 0 0 auto;
+  aspect-ratio: 2.37;
+  margin-top: 14px;
+  pointer-events: auto;
+}
+
+.site-footer {
+  min-height: 0;
+  padding: 32px 0 18px;
+  border-top: 2px solid #1f2a77;
+  background: #dce6f1;
+  color: #1f2a77;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 0;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.8fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 48px;
+}
+
+.footer-brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand {
+  gap: 12px;
+}
+
+.footer-brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.footer-brand span {
+  color: #d23f3c;
+  font-size: 34px;
+}
+
+.footer-nav h2 {
+  margin: 0 0 12px;
+  color: #1f2a77;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-nav {
+  width: 100%;
+  text-align: left;
+}
+
+.footer-nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: #2365bd;
+  font-size: 15px;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: #d23f3c;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #9dbbe5;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #345b91;
+  font-size: 13px;
+}
+
+.footer-note {
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+.footer-tagline {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .check-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .check-title {
+    flex-wrap: wrap;
+  }
+
+  .check-title > span {
+    order: 2;
+    flex-basis: 100%;
+  }
+
+  .check-title .golden-rules {
+    max-width: 45%;
+    margin-left: auto;
+  }
+
+  .ask-panel-position {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+
+  .ask-dialog {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 520px;
+    min-height: 0;
+    max-height: none;
+    grid-template-rows: 10px 100px minmax(0, 1fr);
+    border-radius: 24px;
+  }
+
+  .site-footer {
+    padding-top: 28px;
+  }
+
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .footer-nav ul {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-tagline {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .check-card {
+    transition-duration: 1ms;
+  }
+}
+
+.check-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.check-tab:disabled,
+.camera-button:disabled,
+.selected-file-preview button:disabled,
+.check-form-column textarea:disabled {
+  cursor: not-allowed;
+}

@@ -42,7 +42,7 @@ export default function RiskLevels({ t }) {
           ))}
         </div>
 
-        <article className="privacy-card">
+        <article className="privacy-card" id="privacy">
           <div className="privacy-heading">
             <span className="privacy-icon">
               <Lock aria-hidden="true" size={28} strokeWidth={2} />
