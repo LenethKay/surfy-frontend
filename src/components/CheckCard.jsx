@@ -45,6 +45,7 @@ export default function CheckCard({
   isAskThinking,
   askMessages,
   onAskSend,
+  surfyOpenRequest,
   feedbackDialog,
   t,
   children,
@@ -68,6 +69,8 @@ export default function CheckCard({
   }, []);
 
   useLayoutEffect(() => {
+    // The chat grows independently; keep its composer inside the natural card.
+    if (isAskOpen || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
     const card = cardRef.current;
     if (!card || typeof ResizeObserver === 'undefined') return undefined;
 
@@ -107,7 +110,25 @@ export default function CheckCard({
       card.style.height = '';
       card.style.overflow = '';
     };
-  }, []);
+  }, [isAskOpen]);
+
+  useLayoutEffect(() => {
+    if (!isAskOpen || status !== 'result') return undefined;
+    const grid = cardRef.current?.querySelector('.check-columns');
+    const input = grid?.querySelector('.check-input-column');
+    if (!input) return undefined;
+    // A tall result must not stretch the row above the assistant.
+    const measure = () => grid.style.setProperty('--check-input-row', `${input.getBoundingClientRect().height}px`);
+    measure();
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
+    observer?.observe(input);
+    window.addEventListener('resize', measure);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener('resize', measure);
+      grid.style.removeProperty('--check-input-row');
+    };
+  }, [isAskOpen, status]);
 
   const selectTab = (nextIndex) => {
     if (isLocked) return;
@@ -160,7 +181,7 @@ export default function CheckCard({
           </div>
         </div>
 
-        <div className="check-columns">
+        <div className={`check-columns${isAskOpen ? ' has-ask-panel' : ''}${status === 'result' ? ' has-check-result' : ''}`}>
           <div className={`check-input-column${isAskOpen ? ' has-ask' : ''}`}>
             <div className="input-card">
               <div className="check-tabs" role="tablist" aria-label={t('check.tabs.label')}>
@@ -334,20 +355,21 @@ export default function CheckCard({
                 </div>
               </div>
             </div>
-
-            {isAskOpen && (
-              <div className="ask-panel-position">
-                <AskSurfy
-                  isOpen={isAskOpen}
-                  isClosing={isAskClosing}
-                  isThinking={isAskThinking}
-                  messages={askMessages}
-                  onSend={onAskSend}
-                  t={t}
-                />
-              </div>
-            )}
           </div>
+
+          {isAskOpen && (
+            <div className="ask-panel-position">
+              <AskSurfy
+                isOpen={isAskOpen}
+                isClosing={isAskClosing}
+                isThinking={isAskThinking}
+                messages={askMessages}
+                onSend={onAskSend}
+                openRequest={surfyOpenRequest}
+                t={t}
+              />
+            </div>
+          )}
 
           <div className="check-result-column">
             {children}

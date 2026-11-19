@@ -16,20 +16,29 @@ const QUESTION_MATCHERS = [
   { key: 'ask.uncertain', words: ['sure', 'certain', 'unsure', 'not sure', 'sigurado', 'uncertain'] },
 ];
 
-function findQuestionKey(question) {
-  const normalized = question.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+function normalizeQuestion(question) {
+  return question.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+}
+
+function findQuestionKey(question, t) {
+  const normalized = normalizeQuestion(question);
+  const exact = SURFY_QUESTION_KEYS.find((key) => normalizeQuestion(t(key)) === normalized);
+  if (exact) return exact;
+  const searchable = ` ${normalized} `;
   const best = QUESTION_MATCHERS
     .map(({ key, words }) => ({
       key,
-      score: words.reduce((score, word) => score + (normalized.includes(word) ? 1 : 0), 0),
+      score: words.reduce((score, word) => score + (searchable.includes(` ${normalizeQuestion(word)} `) ? 1 : 0), 0),
     }))
     .sort((left, right) => right.score - left.score)[0];
   return best?.score ? best.key : null;
 }
 
 export function getSurfyAnswer(question, result, t) {
-  const key = findQuestionKey(question);
+  const key = findQuestionKey(question, t);
   if (!key) return t('ask.fallback');
+  if (!result && (key === 'ask.why' || key === 'ask.next')) return t('ask.noResult');
 
   if (key === 'ask.why') {
     const indicators = result?.signals?.map((signal) => t(`signal.${signal.id}`)).filter(Boolean);

@@ -239,7 +239,7 @@ export default function WelcomeExperience({ children, t }) {
         : clampScroll(initialScroll + view.top - header - 24)];
       const obstacles = [...document.querySelectorAll('.app-bg button, .app-bg a[href], .app-bg textarea, .app-bg select, #hero-title, .hero-subtitle, .check-title, .field-heading, .result-cap, .privacy-heading')]
         .filter(element => getComputedStyle(element).visibility !== 'hidden')
-        .map(element => ({ element, rect: element.getBoundingClientRect(), sticky: Boolean(element.closest('.site-header')), control: element.matches('button,a,textarea,select') }))
+        .map(element => ({ element, rect: element.getBoundingClientRect(), sticky: Boolean(element.closest('.site-header, .bottom-shortcuts')), control: element.matches('button,a,textarea,select') }))
         .filter(({ rect }) => rect.width > 8 && rect.height > 8);
       const overlap = (a,b) => Math.max(0, Math.min(a.right,b.right)-Math.max(a.left,b.left)) * Math.max(0, Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
       let best = null;
@@ -247,11 +247,13 @@ export default function WelcomeExperience({ children, t }) {
         const delta = scroll - initialScroll;
         const targetRect = { left: initial.left, right: initial.right, top: initial.top - (stickyTarget ? 0 : delta), bottom: initial.bottom - (stickyTarget ? 0 : delta) };
         const xs = [innerWidth - width - 16, 16, targetRect.right + 20, targetRect.left - width - 20];
+        const shortcutTop = document.querySelector('.bottom-shortcuts')?.getBoundingClientRect().top;
         const ys = [vh - dockHeight - 16, header + 16, targetRect.bottom + 24, targetRect.top - dockHeight - 24, (vh - dockHeight) / 2];
+        if (shortcutTop !== undefined) ys.push(shortcutTop - dockHeight + 8, targetRect.bottom + 12, targetRect.top - dockHeight - 12);
         for (const x of xs) for (const y of ys) {
           if (x < 12 || x + width > innerWidth - 12 || y < header + 10 || y + dockHeight > vh - 10) continue;
           const card = { left:x, right:x+width, top:y, bottom:y+dockHeight };
-          let score = Math.abs(delta) * .002 + overlap(card,targetRect) * 1000;
+          let score = Math.abs(delta) * .002 + overlap(card,targetRect) * 10000;
           if (!stickyTarget && (targetRect.top < header + 8 || targetRect.bottom > vh - 8)) score += 1e8;
           for (const item of obstacles) {
             const shift = item.sticky ? 0 : delta;

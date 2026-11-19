@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Send } from 'lucide-react';
+import { ChevronDown, ChevronUp, Send } from 'lucide-react';
 import { ASSETS } from '../assets.js';
 import { SURFY_QUESTION_KEYS } from '../surfy/templates.js';
+import './AskSurfy.css';
 
 export default function AskSurfy({
   isOpen,
@@ -9,23 +10,33 @@ export default function AskSurfy({
   isThinking,
   messages,
   onSend,
+  openRequest,
   t,
 }) {
   const [draft, setDraft] = useState('');
   const [isCollapsed, setIsCollapsed] = useState(false);
   const messagesRef = useRef(null);
   const inputRef = useRef(null);
+  const followLatestRef = useRef(true);
+
+  useEffect(() => { setIsCollapsed(false); }, [openRequest]);
 
   useEffect(() => {
     const messagesElement = messagesRef.current;
-    if (messagesElement) messagesElement.scrollTop = messagesElement.scrollHeight;
-  }, [messages, isThinking]);
+    if (messagesElement && followLatestRef.current && !isCollapsed) {
+      messagesElement.scrollTo({
+        top: messagesElement.scrollHeight,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      });
+    }
+  }, [messages, isThinking, isCollapsed]);
 
   if (!isOpen) return null;
 
   const submit = (value) => {
     const question = value.trim();
     if (!question) return;
+    followLatestRef.current = true;
     onSend(question);
     setDraft('');
     if (inputRef.current) {
@@ -40,29 +51,37 @@ export default function AskSurfy({
       role="complementary"
       aria-label={t('ask.title')}
     >
-      <button
-        className="ask-mobile-handle"
-        type="button"
-        aria-label={t(isCollapsed ? 'ask.expand' : 'ask.collapse')}
-        aria-expanded={!isCollapsed}
-        onClick={() => setIsCollapsed((collapsed) => !collapsed)}
-      >
-        <span aria-hidden="true" />
-      </button>
-
-      <div className="ask-brand">
-        <img
-          src={ASSETS.surfyWink}
-          alt={t('ask.imageAlt')}
-          width="1000"
-          height="1000"
-          decoding="async"
-        />
-        <h2>{t('ask.title')}</h2>
+      <div className="ask-wave" aria-hidden="true">
+        <svg viewBox="0 0 600 80" preserveAspectRatio="none">
+          <path d="M0 28C90 0 170 51 270 25S460 6 600 28V80H0Z" fill="#2f73c6" />
+          <path d="M0 44C110 70 180 15 310 44S475 61 600 38V80H0Z" fill="#8dd7f5" />
+        </svg>
       </div>
 
-      <div className="ask-content">
-        <div className="ask-messages" ref={messagesRef} aria-live="polite">
+      <header className="ask-brand">
+        <span className="ask-avatar" aria-hidden="true">
+          <img src={ASSETS.surfyWink} alt="" width="1000" height="1000" decoding="async" />
+        </span>
+        <div className="ask-heading">
+          <p className="ask-eyebrow">{t('ask.eyebrow')}</p>
+          <h2>{t('ask.title')}</h2>
+        </div>
+        <button className="ask-toggle" type="button"
+          aria-label={t(isCollapsed ? 'ask.expand' : 'ask.collapse')}
+          aria-expanded={!isCollapsed} aria-controls="ask-conversation"
+          onClick={() => setIsCollapsed((collapsed) => !collapsed)}>
+          {isCollapsed ? <ChevronDown size={20} aria-hidden="true" /> : <ChevronUp size={20} aria-hidden="true" />}
+        </button>
+      </header>
+
+      <div className="ask-content" id="ask-conversation">
+        <div className="ask-messages" ref={messagesRef} aria-live="polite" aria-relevant="additions text"
+          onScroll={(event) => {
+            const element = event.currentTarget;
+            element.dataset.scrolled = element.scrollTop > 4 ? 'true' : 'false';
+            followLatestRef.current = element.scrollHeight - element.clientHeight - element.scrollTop < 48;
+          }}>
+          {!messages.length && !isThinking && <p className="ask-welcome">{t('ask.welcome')}</p>}
           {messages.map((message, index) => {
             if (message.role === 'divider') {
               return (
@@ -87,7 +106,7 @@ export default function AskSurfy({
           )}
         </div>
 
-        <div className="ask-chips">
+        <div className="ask-chips" role="group" aria-label={t('ask.suggestions')}>
           {SURFY_QUESTION_KEYS.map((key) => (
             <button type="button" className="ask-chip" key={key} onClick={() => submit(t(key))}>
               {t(key)}
@@ -124,7 +143,7 @@ export default function AskSurfy({
               textarea.style.overflowY = textarea.scrollHeight > maximumHeight ? 'auto' : 'hidden';
             }}
             onKeyDown={(event) => {
-              if (event.key === 'Enter' && !event.shiftKey) {
+              if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) {
                 event.preventDefault();
                 event.currentTarget.form.requestSubmit();
               }

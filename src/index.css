@@ -8563,8 +8563,8 @@ html {
   display: grid;
   align-items: center;
   height: auto;
-  min-height: calc(100svh - 56px);
-  padding: clamp(64px, 10vh, 130px) 24px clamp(130px, 16vw, 240px);
+  min-height: 0;
+  padding: 80px 24px 128px;
 }
 
 .hero-content {
@@ -8575,8 +8575,8 @@ html {
 .hero h1 {
   max-width: 950px;
   margin-inline: auto;
-  font-size: clamp(2.75rem, 6.4vw, 6.25rem);
-  line-height: 1.07;
+  font-size: clamp(2.25rem, 4.6vw, 4rem);
+  line-height: 1.05;
   white-space: normal;
   text-wrap: balance;
 }
@@ -8587,30 +8587,30 @@ html {
 
 .hero-eyebrow {
   font-size: clamp(.875rem, 1.1vw, 1rem);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .hero-subtitle {
   max-width: 580px;
-  margin-top: 28px;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  line-height: 1.65;
+  margin-top: 16px;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.5;
 }
 
 .hero-actions {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 32px;
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .hero-actions a {
   display: inline-flex;
-  min-height: 52px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 14px 26px;
+  padding: 12px 22px;
   border: 1px solid transparent;
   border-radius: 999px;
   font-size: 1rem;
@@ -8743,7 +8743,7 @@ html {
 }
 
 @media (max-width: 767px) {
-  .hero { padding-bottom: 150px; }
+  .hero { padding-bottom: 78px; }
   .check-card { width: calc(100% - 32px); padding: 24px 20px; border-radius: 28px; }
   .check-columns { grid-template-columns: minmax(0, 1fr); }
   .how-layout { grid-template-columns: minmax(0, 1fr); }
@@ -8757,14 +8757,14 @@ html {
 
 @media (max-width: 640px) {
   .hero {
-    min-height: calc(100svh - 52px);
-    padding: 64px 20px 115px;
+    min-height: 0;
+    padding: 52px 20px 90px;
   }
-  .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
-  .hero-subtitle { margin-top: 22px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.75rem); }
+  .hero-subtitle { margin-top: 16px; }
   .hero-eyebrow { line-height: 1.6; }
-  .hero-actions { gap: 12px; margin-top: 26px; }
-  .hero-actions a { padding-inline: 20px; }
+  .hero-actions { gap: 10px; margin-top: 20px; }
+  .hero-actions a { min-height: 44px; padding: 10px 16px; }
   .hero-scroll { margin-top: 24px; }
   .wave-stage img { width: max(100%, 700px); max-width: none; }
   .nav-controls { gap: 8px; }
@@ -8777,8 +8777,6 @@ html {
   .brand { gap: 5px; }
   .nav-controls { gap: 5px; }
   .connection-status { padding-inline: 8px; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions a { width: 100%; }
   .hero-scroll { font-size: .8125rem; }
 }
 
@@ -8802,6 +8800,44 @@ html {
   color: #ff6965;
   white-space: nowrap;
 }
+
+.hero-surf-scene {
+  position: absolute;
+  z-index: 3;
+  top: auto;
+  right: max(16px, calc((100vw - 1440px) / 2 + 16px));
+  bottom: 132px;
+  left: auto;
+  width: clamp(240px, 24vw, 340px);
+  height: auto;
+  object-fit: contain;
+  transform-origin: 50% 91%;
+  filter: drop-shadow(0 10px 16px rgba(4, 24, 71, .16));
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero .wave-stage { z-index: 2; transform-origin: 50% 100%; }
+.hero .hero-content { z-index: 4; }
+
+@media (max-width: 1023px) {
+  .hero-surf-scene {
+    top: auto;
+    right: 8px;
+    bottom: 60px;
+    left: auto;
+    width: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-surf-scene { right: -6px; bottom: 2px; width: 146px; }
+}
+
+@media (max-width: 359px) {
+  .hero-surf-scene { right: -4px; width: 128px; }
+}
+
 
 /* Keep the detector's introduction compact on phones. */
 @media (max-width: 767px) {
