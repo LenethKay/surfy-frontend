@@ -1,0 +1,429 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.9
+2 info using node@v22.23.4
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\kaixe\Desktop\surfy-frontend\.npmrc
+5 silly config load:file:C:\Users\kaixe\.npmrc
+6 silly config load:file:C:\Users\kaixe\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @fontsource-variable/nunito
+8 verbose argv "install" "@fontsource-variable/nunito" "--cache" ".npm-cache" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:C:\Users\kaixe\Desktop\surfy-frontend\.npm-cache\_logs\2026-11-18T14_32_11_430Z-
+10 verbose logfile C:\Users\kaixe\Desktop\surfy-frontend\.npm-cache\_logs\2026-11-18T14_32_11_430Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest @fontsource-variable/nunito@*
+15 silly packumentCache full:https://registry.npmjs.org/@fontsource-variable%2fnunito cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/@fontsource-variable%2fnunito 5528ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/@fontsource-variable%2fnunito set size:undefined disposed:false
+19 silly placeDep ROOT @fontsource-variable/nunito@5.3.0 OK for: surfare@0.1.0 want: *
+20 silly reify moves {}
+21 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-win32-arm64-msvc
+22 silly reify mark deleted [
+22 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-win32-arm64-msvc'
+22 silly reify ]
+23 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-x64-musl
+24 silly reify mark deleted [
+24 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-musl'
+24 silly reify ]
+25 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-x64-gnu
+26 silly reify mark deleted [
+26 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-gnu'
+26 silly reify ]
+27 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm64-musl
+28 silly reify mark deleted [
+28 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-musl'
+28 silly reify ]
+29 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm64-gnu
+30 silly reify mark deleted [
+30 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-gnu'
+30 silly reify ]
+31 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm-gnueabihf
+32 silly reify mark deleted [
+32 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm-gnueabihf'
+32 silly reify ]
+33 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-freebsd-x64
+34 silly reify mark deleted [
+34 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-freebsd-x64'
+34 silly reify ]
+35 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-darwin-x64
+36 silly reify mark deleted [
+36 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-x64'
+36 silly reify ]
+37 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-darwin-arm64
+38 silly reify mark deleted [
+38 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-arm64'
+38 silly reify ]
+39 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-android-arm64
+40 silly reify mark deleted [
+40 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-android-arm64'
+40 silly reify ]
+41 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\fsevents
+42 silly reify mark deleted [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fsevents' ]
+43 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-win32-ia32-msvc
+44 silly reify mark deleted [
+44 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+44 silly reify ]
+45 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-win32-arm64-msvc
+46 silly reify mark deleted [
+46 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+46 silly reify ]
+47 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-openharmony-arm64
+48 silly reify mark deleted [
+48 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openharmony-arm64'
+48 silly reify ]
+49 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-openbsd-x64
+50 silly reify mark deleted [
+50 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openbsd-x64'
+50 silly reify ]
+51 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-x64-musl
+52 silly reify mark deleted [
+52 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-musl'
+52 silly reify ]
+53 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-x64-gnu
+54 silly reify mark deleted [
+54 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+54 silly reify ]
+55 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-s390x-gnu
+56 silly reify mark deleted [
+56 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+56 silly reify ]
+57 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-riscv64-musl
+58 silly reify mark deleted [
+58 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+58 silly reify ]
+59 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-riscv64-gnu
+60 silly reify mark deleted [
+60 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+60 silly reify ]
+61 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-ppc64-musl
+62 silly reify mark deleted [
+62 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+62 silly reify ]
+63 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-ppc64-gnu
+64 silly reify mark deleted [
+64 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+64 silly reify ]
+65 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-loong64-musl
+66 silly reify mark deleted [
+66 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+66 silly reify ]
+67 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-loong64-gnu
+68 silly reify mark deleted [
+68 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+68 silly reify ]
+69 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm64-musl
+70 silly reify mark deleted [
+70 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+70 silly reify ]
+71 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm64-gnu
+72 silly reify mark deleted [
+72 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+72 silly reify ]
+73 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm-musleabihf
+74 silly reify mark deleted [
+74 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+74 silly reify ]
+75 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm-gnueabihf
+76 silly reify mark deleted [
+76 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+76 silly reify ]
+77 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-freebsd-x64
+78 silly reify mark deleted [
+78 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-x64'
+78 silly reify ]
+79 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-freebsd-arm64
+80 silly reify mark deleted [
+80 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-arm64'
+80 silly reify ]
+81 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-darwin-x64
+82 silly reify mark deleted [
+82 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-x64'
+82 silly reify ]
+83 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-darwin-arm64
+84 silly reify mark deleted [
+84 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-arm64'
+84 silly reify ]
+85 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-x64
+86 silly reify mark deleted [
+86 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-x64'
+86 silly reify ]
+87 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-arm64
+88 silly reify mark deleted [
+88 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm64'
+88 silly reify ]
+89 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-arm-eabi
+90 silly reify mark deleted [
+90 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm-eabi'
+90 silly reify ]
+91 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-win32-arm64-msvc
+92 silly reify mark deleted [
+92 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+92 silly reify ]
+93 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-wasm32-wasi
+94 silly reify mark deleted [
+94 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi'
+94 silly reify ]
+95 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@emnapi\core
+96 silly reify mark deleted [
+96 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\core'
+96 silly reify ]
+97 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-wasm32-wasi\node_modules\@emnapi\runtime
+98 silly reify mark deleted [
+98 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+98 silly reify ]
+99 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@napi-rs\wasm-runtime
+100 silly reify mark deleted [
+100 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@napi-rs\\wasm-runtime'
+100 silly reify ]
+101 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@emnapi\wasi-threads
+102 silly reify mark deleted [
+102 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\wasi-threads'
+102 silly reify ]
+103 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@tybys\wasm-util
+104 silly reify mark deleted [
+104 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tybys\\wasm-util'
+104 silly reify ]
+105 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-openharmony-arm64
+106 silly reify mark deleted [
+106 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-openharmony-arm64'
+106 silly reify ]
+107 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-x64-musl
+108 silly reify mark deleted [
+108 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-musl'
+108 silly reify ]
+109 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-x64-gnu
+110 silly reify mark deleted [
+110 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+110 silly reify ]
+111 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-s390x-gnu
+112 silly reify mark deleted [
+112 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+112 silly reify ]
+113 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-ppc64-gnu
+114 silly reify mark deleted [
+114 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+114 silly reify ]
+115 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm64-musl
+116 silly reify mark deleted [
+116 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+116 silly reify ]
+117 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm64-gnu
+118 silly reify mark deleted [
+118 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+118 silly reify ]
+119 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm-gnueabihf
+120 silly reify mark deleted [
+120 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+120 silly reify ]
+121 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-freebsd-x64
+122 silly reify mark deleted [
+122 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-freebsd-x64'
+122 silly reify ]
+123 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-darwin-x64
+124 silly reify mark deleted [
+124 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-x64'
+124 silly reify ]
+125 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-darwin-arm64
+126 silly reify mark deleted [
+126 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-arm64'
+126 silly reify ]
+127 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-android-arm64
+128 silly reify mark deleted [
+128 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm64'
+128 silly reify ]
+129 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-android-arm-eabi
+130 silly reify mark deleted [
+130 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm-eabi'
+130 silly reify ]
+131 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-win32-ia32
+132 silly reify mark deleted [
+132 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-ia32'
+132 silly reify ]
+133 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-win32-arm64
+134 silly reify mark deleted [
+134 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-arm64'
+134 silly reify ]
+135 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-webcontainers-wasm32
+136 silly reify mark deleted [
+136 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-webcontainers-wasm32'
+136 silly reify ]
+137 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linuxmusl-x64
+138 silly reify mark deleted [
+138 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-x64'
+138 silly reify ]
+139 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linuxmusl-arm64
+140 silly reify mark deleted [
+140 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-arm64'
+140 silly reify ]
+141 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-x64
+142 silly reify mark deleted [
+142 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-x64'
+142 silly reify ]
+143 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-s390x
+144 silly reify mark deleted [
+144 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-s390x'
+144 silly reify ]
+145 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-riscv64
+146 silly reify mark deleted [
+146 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-riscv64'
+146 silly reify ]
+147 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-ppc64
+148 silly reify mark deleted [
+148 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-ppc64'
+148 silly reify ]
+149 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-arm64
+150 silly reify mark deleted [
+150 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm64'
+150 silly reify ]
+151 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-arm
+152 silly reify mark deleted [
+152 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm'
+152 silly reify ]
+153 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linuxmusl-x64
+154 silly reify mark deleted [
+154 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+154 silly reify ]
+155 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linuxmusl-arm64
+156 silly reify mark deleted [
+156 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+156 silly reify ]
+157 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-x64
+158 silly reify mark deleted [
+158 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-x64'
+158 silly reify ]
+159 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-s390x
+160 silly reify mark deleted [
+160 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-s390x'
+160 silly reify ]
+161 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-riscv64
+162 silly reify mark deleted [
+162 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+162 silly reify ]
+163 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-ppc64
+164 silly reify mark deleted [
+164 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+164 silly reify ]
+165 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-arm64
+166 silly reify mark deleted [
+166 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm64'
+166 silly reify ]
+167 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-arm
+168 silly reify mark deleted [
+168 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm'
+168 silly reify ]
+169 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-darwin-x64
+170 silly reify mark deleted [
+170 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-x64'
+170 silly reify ]
+171 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-darwin-arm64
+172 silly reify mark deleted [
+172 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+172 silly reify ]
+173 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-freebsd-wasm32
+174 silly reify mark deleted [
+174 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-freebsd-wasm32'
+174 silly reify ]
+175 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-darwin-x64
+176 silly reify mark deleted [
+176 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-x64'
+176 silly reify ]
+177 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-darwin-arm64
+178 silly reify mark deleted [
+178 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-arm64'
+178 silly reify ]
+179 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.5.tgz 0ms (cache hit)
+180 http cache @fontsource-variable/nunito@https://registry.npmjs.org/@fontsource-variable/nunito/-/nunito-5.3.0.tgz 0ms (cache hit)
+181 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-2.0.0-beta.2.tgz 0ms (cache hit)
+182 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.2.6.tgz 0ms (cache hit)
+183 silly tarball no local data for @fontsource-variable/nunito@https://registry.npmjs.org/@fontsource-variable/nunito/-/nunito-5.3.0.tgz. Extracting by manifest.
+184 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-2.0.0-beta.2.tgz 0ms (cache hit)
+185 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-2.2.0.tgz 0ms (cache hit)
+186 http fetch GET 200 https://registry.npmjs.org/@fontsource-variable/nunito/-/nunito-5.3.0.tgz 290ms (cache miss)
+187 silly ADD node_modules/@fontsource-variable/nunito
+188 silly ADD
+189 silly ADD
+190 silly ADD
+191 silly ADD
+192 silly ADD
+193 silly ADD
+194 silly ADD
+195 silly ADD
+196 silly ADD
+197 silly ADD
+198 silly ADD
+199 silly ADD
+200 silly ADD
+201 silly ADD
+202 silly ADD
+203 silly ADD
+204 silly ADD
+205 silly ADD
+206 silly ADD
+207 silly ADD
+208 silly ADD
+209 silly ADD
+210 silly ADD
+211 silly ADD
+212 silly ADD
+213 silly ADD
+214 silly ADD
+215 silly ADD
+216 silly ADD
+217 silly ADD
+218 silly ADD
+219 silly ADD
+220 silly ADD
+221 silly ADD
+222 silly ADD
+223 silly ADD
+224 silly ADD
+225 silly ADD
+226 silly ADD node_modules/@emnapi/runtime
+227 silly ADD
+228 silly ADD
+229 silly ADD
+230 silly ADD
+231 silly ADD
+232 silly ADD
+233 silly ADD
+234 silly ADD
+235 silly ADD
+236 silly ADD
+237 silly ADD
+238 silly ADD
+239 silly ADD
+240 silly ADD
+241 silly ADD
+242 silly ADD
+243 silly ADD
+244 silly ADD
+245 silly ADD
+246 silly ADD
+247 silly ADD
+248 silly ADD
+249 silly ADD
+250 silly ADD
+251 silly ADD
+252 silly ADD
+253 silly ADD
+254 silly ADD
+255 silly ADD
+256 silly ADD
+257 silly ADD
+258 silly ADD
+259 silly ADD
+260 silly ADD
+261 silly ADD
+262 silly ADD
+263 silly ADD
+264 silly ADD
+265 silly ADD
+266 silly ADD
+267 verbose cwd C:\Users\kaixe\Desktop\surfy-frontend
+268 verbose os Windows_NT 10.0.26200
+269 verbose node v22.23.4
+270 verbose npm  v10.9.9
+271 verbose exit 0
+272 info ok

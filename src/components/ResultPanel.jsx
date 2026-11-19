@@ -147,25 +147,14 @@ export default function ResultPanel({ status, result, errorKey, t, onReset }) {
 
   return (
     <div className="result-column">
-      <div className="result-cap">
-        <span>{t('result.title')}</span>
-        <img
-          className="result-wave-top"
-          src={ASSETS.waveCap}
-          alt=""
-          aria-hidden="true"
-          width="1000"
-          height="124"
-          decoding="async"
-        />
-      </div>
       <section
-        className={`result-panel ${showResult ? `result-${level}` : ''}`}
+        className={`result-panel result-${showResult ? level : status}`}
         aria-labelledby={titleId}
         aria-live="polite"
         aria-busy={status === 'analyzing'}
       >
         <div className="result-content">
+          <div className="result-cap"><h2>{t('result.title')}</h2></div>
           <div className="result-body">
             <div className={`result-heading ${showResult ? `result-heading-${level}` : 'result-heading-idle'}`}>
               {showResult ? (
@@ -176,14 +165,7 @@ export default function ResultPanel({ status, result, errorKey, t, onReset }) {
                   {level === 'unknown' && <HelpCircle aria-hidden="true" />}
                 </div>
               ) : (
-                <img
-                  className="result-ready-mascot"
-                  src={MASCOT_BY_STATE.ready.mascot}
-                  alt=""
-                  width="1000"
-                  height="1000"
-                  decoding="async"
-                />
+                <span className="result-ready-icon" aria-hidden="true"><ShieldCheck /></span>
               )}
               <div className="result-title-copy">
                 <h3 id={titleId} className="result-state-title">{stateTitle}</h3>
@@ -207,35 +189,26 @@ export default function ResultPanel({ status, result, errorKey, t, onReset }) {
               </div>
             )}
 
-            <div className={`risk-meter-wrap ${showResult && !isUnknown ? `meter-position-${level}` : ''} ${isUnknown ? 'meter-unknown' : ''}`}>
-              <div
-                className={`risk-meter ${showResult && !isUnknown ? 'has-risk-result' : ''}`}
-                role="img"
-                aria-label={`${t('result.riskLevel')}: ${meterLabel}`}
-              >
-                <span className="meter-segment meter-segment-low" />
-                <span className="meter-segment meter-segment-suspicious" />
-                <span className="meter-segment meter-segment-high" />
-                {showResult && !isUnknown && <span className="meter-indicator" aria-hidden="true" />}
+            {showResult && !isUnknown && (
+              <div className={`risk-meter-wrap meter-position-${level}`}>
+                <div
+                  className="risk-meter has-risk-result"
+                  role="img"
+                  aria-label={`${t('result.riskLevel')}: ${meterLabel}`}
+                >
+                  <span className="meter-segment meter-segment-low" />
+                  <span className="meter-segment meter-segment-suspicious" />
+                  <span className="meter-segment meter-segment-high" />
+                  <span className="meter-indicator" aria-hidden="true" />
+                </div>
+                <div className="risk-meter-labels" aria-hidden="true">
+                  <span className={level === 'low' ? 'is-active' : ''}>{t('result.meter.low')}</span>
+                  <span className={level === 'suspicious' ? 'is-active' : ''}>{t('result.meter.suspicious')}</span>
+                  <span className={level === 'high' ? 'is-active' : ''}>{t('result.meter.high')}</span>
+                </div>
               </div>
-              <div className="risk-meter-labels" aria-hidden="true">
-                <span className={showResult && level === 'low' ? 'is-active' : ''}>{t('result.meter.low')}</span>
-                <span className={showResult && level === 'suspicious' ? 'is-active' : ''}>{t('result.meter.suspicious')}</span>
-                <span className={showResult && level === 'high' ? 'is-active' : ''}>{t('result.meter.high')}</span>
-              </div>
-              {isUnknown && <p className="unknown-meter-note">{t('result.unknown.unplaced')}</p>}
-            </div>
-
-            {status === 'idle' && (
-              <img
-                className="result-empty"
-                src={ASSETS.emptyBox}
-                alt=""
-                width="1000"
-                height="1000"
-                decoding="async"
-              />
             )}
+            {isUnknown && <p className="unknown-meter-note">{t('result.unknown.unplaced')}</p>}
 
             {showResult && (
               <div className={`result-details ${isUnknown ? 'result-details-unknown' : ''}`}>
@@ -322,7 +295,7 @@ export default function ResultPanel({ status, result, errorKey, t, onReset }) {
 
           <footer className="result-footer">
             <span className="result-team"><ShieldCheck aria-hidden="true" />{t('result.team')}</span>
-            <div className="report-control" ref={reportPopoverRef}>
+            {showResult && <div className="report-control" ref={reportPopoverRef}>
               {isReportOpen && showResult && (
                 <div className="result-save-popover" id={reportPopoverId} role="dialog" aria-label={t('result.saveReport')}>
                   <label>
@@ -353,7 +326,7 @@ export default function ResultPanel({ status, result, errorKey, t, onReset }) {
                 <Download aria-hidden="true" />
                 {t('result.saveReport')}
               </button>
-            </div>
+            </div>}
           </footer>
         </div>
       </section>

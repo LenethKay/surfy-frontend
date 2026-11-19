@@ -1,4 +1,6 @@
 import { ASSETS } from '../assets.js';
+import { Compass } from 'lucide-react';
+import { useSiteTour } from './WelcomeExperience.jsx';
 
 const FOOTER_LINKS = [
   { href: '#top', key: 'nav.home' },
@@ -10,6 +12,7 @@ const FOOTER_LINKS = [
 ];
 
 export default function Footer({ t }) {
+  const startTour = useSiteTour();
   return (
     <footer className="site-footer">
       <div className="page-container footer-inner">
@@ -19,6 +22,9 @@ export default function Footer({ t }) {
               <img src={ASSETS.appIcon} alt="" width="40" height="40" decoding="async" />
               <span>Surfare</span>
             </a>
+            <button className="tour-replay" type="button" data-tour-start onClick={startTour}>
+              <Compass size={16} aria-hidden="true" />{t('tour.replay')}
+            </button>
           </div>
           <nav className="footer-nav" aria-label={t('footer.explore')}>
             <h2>{t('footer.explore')}</h2>

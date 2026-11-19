@@ -1,0 +1,1480 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.9
+2 info using node@v22.23.4
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\kaixe\Desktop\surfy-frontend\.npmrc
+5 silly config load:file:C:\Users\kaixe\.npmrc
+6 silly config load:file:C:\Users\kaixe\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".npm-cache" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:C:\Users\kaixe\Desktop\surfy-frontend\.npm-cache\_logs\2026-11-18T14_18_35_833Z-
+10 verbose logfile C:\Users\kaixe\Desktop\surfy-frontend\.npm-cache\_logs\2026-11-18T14_18_35_833Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with EACCES
+15 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\arg' ]
+16 silly reify mark retired [
+16 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\assertion-error'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\autoprefixer'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\baseline-browser-mapping'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\brace-expansion'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\browserslist'
+20 silly reify ]
+21 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\cac' ]
+22 silly reify mark retired [
+22 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\camelcase-css'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\caniuse-lite'
+23 silly reify ]
+24 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\chai' ]
+25 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\consola' ]
+26 silly reify mark retired [
+26 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\decode-bmp'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\decode-ico'
+27 silly reify ]
+28 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\defu' ]
+29 silly reify mark retired [
+29 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\didyoumean'
+29 silly reify ]
+30 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\dlv' ]
+31 silly reify mark retired [
+31 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\electron-to-chromium'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\es-module-lexer'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\estree-walker'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\expect-type'
+34 silly reify ]
+35 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fastq' ]
+36 silly reify mark retired [
+36 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fraction.js'
+36 silly reify ]
+37 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fsevents' ]
+38 silly reify mark retired [
+38 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\graceful-fs'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ico-endec'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\is-core-module'
+40 silly reify ]
+41 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jiti' ]
+42 silly reify mark retired [
+42 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-android-arm64'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-arm64'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-x64'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-freebsd-x64'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm-gnueabihf'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-gnu'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-musl'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-gnu'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-musl'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-win32-arm64-msvc'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lilconfig'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\loose-envify'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lucide-react'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\magic-string'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\node-releases'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\object-hash'
+57 silly reify ]
+58 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\obug' ]
+59 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\pirates' ]
+60 silly reify mark retired [
+60 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\playwright'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\playwright-core'
+61 silly reify ]
+62 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss' ]
+63 silly reify mark retired [
+63 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-import'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-js'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-load-config'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-nested'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-selector-parser'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-value-parser'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\pretty-bytes'
+69 silly reify ]
+70 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\quansync' ]
+71 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\react' ]
+72 silly reify mark retired [
+72 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\read-cache'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\react-dom'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\regexpu-core'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\regjsparser'
+75 silly reify ]
+76 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\resolve' ]
+77 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\rolldown' ]
+78 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\rollup' ]
+79 silly reify mark retired [
+79 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\scheduler'
+79 silly reify ]
+80 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\semver' ]
+81 silly reify mark retired [
+81 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\sharp-ico'
+81 silly reify ]
+82 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\std-env' ]
+83 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\sucrase' ]
+84 silly reify mark retired [
+84 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tailwindcss'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tesseract.js'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tesseract.js-core'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tinybench'
+87 silly reify ]
+88 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tinyexec' ]
+89 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tldts' ]
+90 silly reify mark retired [
+90 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tldts-core'
+90 silly reify ]
+91 silly reify mark retired [
+91 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\to-data-view'
+91 silly reify ]
+92 silly reify mark retired [
+92 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ts-interface-checker'
+92 silly reify ]
+93 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\unconfig' ]
+94 silly reify mark retired [
+94 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\unconfig-core'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\update-browserslist-db'
+95 silly reify ]
+96 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vite' ]
+97 silly reify mark retired [
+97 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vite-plugin-pwa'
+97 silly reify ]
+98 silly reify mark retired [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vitest' ]
+99 silly reify mark retired [
+99 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\wasm-feature-detect'
+99 silly reify ]
+100 silly reify mark retired [
+100 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\why-is-node-running'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\core'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\generator'
+102 silly reify ]
+103 silly reify mark retired [
+103 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-compilation-targets'
+103 silly reify ]
+104 silly reify mark retired [
+104 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-create-class-features-plugin'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-create-regexp-features-plugin'
+105 silly reify ]
+106 silly reify mark retired [
+106 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-member-expression-to-functions'
+106 silly reify ]
+107 silly reify mark retired [
+107 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-module-transforms'
+107 silly reify ]
+108 silly reify mark retired [
+108 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-skip-transparent-expression-wrappers'
+108 silly reify ]
+109 silly reify mark retired [
+109 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-string-parser'
+109 silly reify ]
+110 silly reify mark retired [
+110 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-wrap-function'
+110 silly reify ]
+111 silly reify mark retired [
+111 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helpers'
+111 silly reify ]
+112 silly reify mark retired [
+112 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\parser'
+112 silly reify ]
+113 silly reify mark retired [
+113 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-bugfix-safari-rest-destructuring-rhs-array'
+113 silly reify ]
+114 silly reify mark retired [
+114 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-block-scoping'
+114 silly reify ]
+115 silly reify mark retired [
+115 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-class-static-block'
+115 silly reify ]
+116 silly reify mark retired [
+116 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-destructuring'
+116 silly reify ]
+117 silly reify mark retired [
+117 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-for-of'
+117 silly reify ]
+118 silly reify mark retired [
+118 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-amd'
+118 silly reify ]
+119 silly reify mark retired [
+119 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-commonjs'
+119 silly reify ]
+120 silly reify mark retired [
+120 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-umd'
+120 silly reify ]
+121 silly reify mark retired [
+121 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\preset-env'
+121 silly reify ]
+122 silly reify mark retired [
+122 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\runtime'
+122 silly reify ]
+123 silly reify mark retired [
+123 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\traverse'
+123 silly reify ]
+124 silly reify mark retired [
+124 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\types'
+124 silly reify ]
+125 silly reify mark retired [
+125 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@canvas\\image-data'
+125 silly reify ]
+126 silly reify mark retired [
+126 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emailjs\\browser'
+126 silly reify ]
+127 silly reify mark retired [
+127 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\core'
+127 silly reify ]
+128 silly reify mark retired [
+128 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\wasi-threads'
+128 silly reify ]
+129 silly reify mark retired [
+129 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\fraunces'
+129 silly reify ]
+130 silly reify mark retired [
+130 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\outfit'
+130 silly reify ]
+131 silly reify mark retired [
+131 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-arm64'
+131 silly reify ]
+132 silly reify mark retired [
+132 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-x64'
+132 silly reify ]
+133 silly reify mark retired [
+133 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-freebsd-wasm32'
+133 silly reify ]
+134 silly reify mark retired [
+134 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+134 silly reify ]
+135 silly reify mark retired [
+135 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-x64'
+135 silly reify ]
+136 silly reify mark retired [
+136 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm'
+136 silly reify ]
+137 silly reify mark retired [
+137 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm64'
+137 silly reify ]
+138 silly reify mark retired [
+138 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+138 silly reify ]
+139 silly reify mark retired [
+139 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+139 silly reify ]
+140 silly reify mark retired [
+140 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-s390x'
+140 silly reify ]
+141 silly reify mark retired [
+141 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-x64'
+141 silly reify ]
+142 silly reify mark retired [
+142 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+142 silly reify ]
+143 silly reify mark retired [
+143 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+143 silly reify ]
+144 silly reify mark retired [
+144 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm'
+144 silly reify ]
+145 silly reify mark retired [
+145 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm64'
+145 silly reify ]
+146 silly reify mark retired [
+146 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-ppc64'
+146 silly reify ]
+147 silly reify mark retired [
+147 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-riscv64'
+147 silly reify ]
+148 silly reify mark retired [
+148 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-s390x'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-x64'
+149 silly reify ]
+150 silly reify mark retired [
+150 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-arm64'
+150 silly reify ]
+151 silly reify mark retired [
+151 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-x64'
+151 silly reify ]
+152 silly reify mark retired [
+152 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-webcontainers-wasm32'
+152 silly reify ]
+153 silly reify mark retired [
+153 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-arm64'
+153 silly reify ]
+154 silly reify mark retired [
+154 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-ia32'
+154 silly reify ]
+155 silly reify mark retired [
+155 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@jridgewell\\resolve-uri'
+155 silly reify ]
+156 silly reify mark retired [
+156 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@napi-rs\\wasm-runtime'
+156 silly reify ]
+157 silly reify mark retired [
+157 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@quansync\\fs'
+157 silly reify ]
+158 silly reify mark retired [
+158 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm-eabi'
+158 silly reify ]
+159 silly reify mark retired [
+159 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm64'
+159 silly reify ]
+160 silly reify mark retired [
+160 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-arm64'
+160 silly reify ]
+161 silly reify mark retired [
+161 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-x64'
+161 silly reify ]
+162 silly reify mark retired [
+162 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-freebsd-x64'
+162 silly reify ]
+163 silly reify mark retired [
+163 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+163 silly reify ]
+164 silly reify mark retired [
+164 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+164 silly reify ]
+165 silly reify mark retired [
+165 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+165 silly reify ]
+166 silly reify mark retired [
+166 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+166 silly reify ]
+167 silly reify mark retired [
+167 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+167 silly reify ]
+168 silly reify mark retired [
+168 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+168 silly reify ]
+169 silly reify mark retired [
+169 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-musl'
+169 silly reify ]
+170 silly reify mark retired [
+170 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-openharmony-arm64'
+170 silly reify ]
+171 silly reify mark retired [
+171 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-x64-msvc'
+171 silly reify ]
+172 silly reify mark retired [
+172 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi'
+172 silly reify ]
+173 silly reify mark retired [
+173 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\pluginutils'
+173 silly reify ]
+174 silly reify mark retired [
+174 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@playwright\\test'
+174 silly reify ]
+175 silly reify mark retired [
+175 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+175 silly reify ]
+176 silly reify mark retired [
+176 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm-eabi'
+176 silly reify ]
+177 silly reify mark retired [
+177 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm64'
+177 silly reify ]
+178 silly reify mark retired [
+178 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-x64'
+178 silly reify ]
+179 silly reify mark retired [
+179 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-arm64'
+179 silly reify ]
+180 silly reify mark retired [
+180 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-x64'
+180 silly reify ]
+181 silly reify mark retired [
+181 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-arm64'
+181 silly reify ]
+182 silly reify mark retired [
+182 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-x64'
+182 silly reify ]
+183 silly reify mark retired [
+183 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+183 silly reify ]
+184 silly reify mark retired [
+184 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+184 silly reify ]
+185 silly reify mark retired [
+185 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+185 silly reify ]
+186 silly reify mark retired [
+186 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+186 silly reify ]
+187 silly reify mark retired [
+187 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+187 silly reify ]
+188 silly reify mark retired [
+188 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+188 silly reify ]
+189 silly reify mark retired [
+189 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+189 silly reify ]
+190 silly reify mark retired [
+190 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+190 silly reify ]
+191 silly reify mark retired [
+191 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+191 silly reify ]
+192 silly reify mark retired [
+192 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+192 silly reify ]
+193 silly reify mark retired [
+193 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+193 silly reify ]
+194 silly reify mark retired [
+194 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+194 silly reify ]
+195 silly reify mark retired [
+195 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-musl'
+195 silly reify ]
+196 silly reify mark retired [
+196 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openbsd-x64'
+196 silly reify ]
+197 silly reify mark retired [
+197 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openharmony-arm64'
+197 silly reify ]
+198 silly reify mark retired [
+198 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+198 silly reify ]
+199 silly reify mark retired [
+199 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+199 silly reify ]
+200 silly reify mark retired [
+200 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-x64-gnu'
+200 silly reify ]
+201 silly reify mark retired [
+201 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-x64-msvc'
+201 silly reify ]
+202 silly reify mark retired [
+202 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tesseract.js-data\\fil'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tybys\\wasm-util'
+203 silly reify ]
+204 silly reify mark retired [
+204 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\chai'
+204 silly reify ]
+205 silly reify mark retired [
+205 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\deep-eql'
+205 silly reify ]
+206 silly reify mark retired [
+206 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vite-pwa\\assets-generator'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitejs\\plugin-react'
+207 silly reify ]
+208 silly reify mark retired [
+208 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\mocker'
+208 silly reify ]
+209 silly reify mark retired [
+209 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\spy'
+209 silly reify ]
+210 silly reify mark retired [
+210 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\acorn',
+210 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn',
+210 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn.cmd',
+210 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn.ps1'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\babel-plugin-polyfill-corejs2\\node_modules\\semver'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ejs',
+212 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs',
+212 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs.cmd',
+212 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs.ps1'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\filelist\\node_modules\\brace-expansion'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\glob',
+214 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob',
+214 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob.cmd',
+214 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob.ps1'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jake',
+215 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake',
+215 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake.cmd',
+215 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake.ps1'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jsesc',
+216 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc',
+216 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc.cmd',
+216 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc.ps1'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\json5',
+217 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5',
+217 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5.cmd',
+217 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5.ps1'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\nanoid',
+218 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid',
+218 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid.cmd',
+218 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid.ps1'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\opencollective-postinstall',
+219 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall',
+219 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall.cmd',
+219 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall.ps1'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\terser',
+220 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser',
+220 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser.cmd',
+220 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser.ps1'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\which',
+221 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which',
+221 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which.cmd',
+221 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which.ps1'
+221 silly reify ]
+222 silly reify moves {
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\arg': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.arg-AkpWm2tb',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\assertion-error': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.assertion-error-UKspSEgk',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\autoprefixer': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.autoprefixer-0huzlLmx',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\baseline-browser-mapping': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.baseline-browser-mapping-Jnw4CSHn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\brace-expansion': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.brace-expansion-C6F23rzk',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\browserslist': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.browserslist-HNyqrS6z',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\cac': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.cac-C4ZzeTqW',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\camelcase-css': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.camelcase-css-jWIFGorS',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\caniuse-lite': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.caniuse-lite-xDApKdmB',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\chai': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.chai-bo1EuK10',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\consola': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.consola-1Ht5zIG1',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\decode-bmp': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.decode-bmp-uFhOiroG',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\decode-ico': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.decode-ico-l8pEsQM8',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\defu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.defu-8Vdrfm1d',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\didyoumean': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.didyoumean-peRUXMkR',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\dlv': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.dlv-bXzdD9bR',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\electron-to-chromium': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.electron-to-chromium-TxmDpbae',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\es-module-lexer': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.es-module-lexer-de4LiiA9',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\estree-walker': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.estree-walker-ar4s5X1k',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\expect-type': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.expect-type-3ecEatCB',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fastq': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.fastq-YdK8DXvI',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fraction.js': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.fraction.js-XPq80P6r',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fsevents': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.fsevents-FyPCa6er',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\graceful-fs': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.graceful-fs-b9mT4L49',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ico-endec': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.ico-endec-Dilqk5Pc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\is-core-module': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.is-core-module-bDcTCncA',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jiti': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.jiti-PP5nID5v',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-android-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-android-arm64-FwqA4cMM',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-darwin-arm64-vNRWBnyp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-darwin-x64-EUwYdga5',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-freebsd-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-freebsd-x64-WuWR1xfT',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm-gnueabihf': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-linux-arm-gnueabihf-0d0QjEWI',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-linux-arm64-gnu-FkM5gvpf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-linux-arm64-musl-pczKH1N0',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-linux-x64-gnu-xc5SlSNO',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-linux-x64-musl-LYsJZPLh',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-win32-arm64-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lightningcss-win32-arm64-msvc-f723166B',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lilconfig': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lilconfig-IRQrIGu1',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\loose-envify': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.loose-envify-q36OfavO',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lucide-react': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.lucide-react-I0rJBohf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\magic-string': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.magic-string-eZ6na0or',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\node-releases': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.node-releases-24jWqQbQ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\object-hash': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.object-hash-haLhelvb',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\obug': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.obug-3DjkHVeh',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\pirates': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.pirates-oci4bTkb',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\playwright': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.playwright-IbIXgy4l',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\playwright-core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.playwright-core-9rPCE3CC',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-Z95iqHud',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-import': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-import-N4KVa3kS',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-js': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-js-mfNJgmAX',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-load-config': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-load-config-Yh7CTByE',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-nested': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-nested-EVFSw0x2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-selector-parser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-selector-parser-rtZpyDRf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\postcss-value-parser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.postcss-value-parser-sdvs69dd',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\pretty-bytes': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.pretty-bytes-Mb4zhEB5',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\quansync': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.quansync-w45eyWX7',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\react': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.react-hd2nSVT1',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\read-cache': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.read-cache-bExMgpuc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\react-dom': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.react-dom-rxB1dXxu',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\regexpu-core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.regexpu-core-BNNLD2kc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\regjsparser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.regjsparser-TNfqTiQy',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\resolve': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.resolve-g9E9BhtP',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\rolldown': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.rolldown-pEgsuawD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\rollup': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.rollup-psZ0esO2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\scheduler': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.scheduler-KSS3eIsF',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\semver': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.semver-TY2WiIDs',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\sharp-ico': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.sharp-ico-6YMTlu28',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\std-env': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.std-env-ky5u6rkb',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\sucrase': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.sucrase-4iC8oIko',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tailwindcss': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tailwindcss-Pf3p8MUZ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tesseract.js': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tesseract.js-Bsagc8Bl',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tesseract.js-core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tesseract.js-core-vTKwjEnp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tinybench': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tinybench-GaUJeY9m',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tinyexec': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tinyexec-mJPTG6C5',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tldts': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tldts-7kaYgzXx',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\tldts-core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.tldts-core-xyZlgwkJ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\to-data-view': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.to-data-view-qL1rGDMD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ts-interface-checker': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.ts-interface-checker-ECq0bnkx',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\unconfig': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.unconfig-ZotMJVGc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\unconfig-core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.unconfig-core-HxyuuUQn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\update-browserslist-db': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.update-browserslist-db-nRw221aO',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vite': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.vite-JG26ctuW',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vite-plugin-pwa': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.vite-plugin-pwa-sGmTpvJf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\vitest': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.vitest-i9DeN5df',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\wasm-feature-detect': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.wasm-feature-detect-WTVjMFNt',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\why-is-node-running': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.why-is-node-running-WjDby6fN',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.core-Twa7o5zD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\generator': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.generator-OF1hAI83',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-compilation-targets': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-compilation-targets-54O7vh6u',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-create-class-features-plugin': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-create-class-features-plugin-mEMPNvfy',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-create-regexp-features-plugin': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-create-regexp-features-plugin-TmBh2bpu',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-member-expression-to-functions': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-member-expression-to-functions-BnwXjis0',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-module-transforms': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-module-transforms-ThL17SUM',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-skip-transparent-expression-wrappers': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-skip-transparent-expression-wrappers-fYWqEZnL',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-string-parser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-string-parser-jCssHqBa',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helper-wrap-function': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helper-wrap-function-7B1Msbi9',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\helpers': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.helpers-8YyCpWYy',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\parser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.parser-7S3pwvUl',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-bugfix-safari-rest-destructuring-rhs-array': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-bugfix-safari-rest-destructuring-rhs-array-yR6F0g7o',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-block-scoping': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-block-scoping-ceeeYBjg',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-class-static-block': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-class-static-block-LL3YbIsS',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-destructuring': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-destructuring-p9vRxJGg',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-for-of': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-for-of-7kOlIUjd',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-amd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-modules-amd-cMSrRY3q',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-commonjs': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-modules-commonjs-MSg88BdH',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\plugin-transform-modules-umd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.plugin-transform-modules-umd-cIbQCZNJ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\preset-env': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.preset-env-hFqhx3ao',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\runtime': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.runtime-az5WRuwf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\traverse': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.traverse-jVWPZLH4',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\types': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@babel\\.types-qUyRfEAu',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@canvas\\image-data': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@canvas\\.image-data-TgDokY2M',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emailjs\\browser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emailjs\\.browser-BudWoMF3',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\core': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\.core-5N1DnXuR',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\wasi-threads': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\.wasi-threads-SshUgJL4',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\fraunces': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\.fraunces-K7kZ9YsC',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\outfit': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@fontsource-variable\\.outfit-IjxTyPbb',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-darwin-arm64-r2KT508R',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-darwin-x64-BPO1D4Ws',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-freebsd-wasm32': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-freebsd-wasm32-qCRvZ0rS',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-darwin-arm64-IhUHzKvp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-darwin-x64-JZUQ3zaS',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-arm-MVL6nWXC',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-arm64-WrZ2kAAE',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-ppc64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-ppc64-k6WMBcJp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-riscv64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-riscv64-55lh9Prc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-s390x': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-s390x-iXSHKYEl',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linux-x64-M7RuYU3J',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linuxmusl-arm64-F8Rxwaat',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-libvips-linuxmusl-x64-2oLivFQL',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-arm-tlEW5koZ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-arm64-3PEswvna',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-ppc64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-ppc64-5MBFADJc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-riscv64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-riscv64-WMI5pS9f',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-s390x': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-s390x-GtrbN0Xs',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linux-x64-I8itAzq3',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linuxmusl-arm64-tMfNHSHM',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-linuxmusl-x64-2nxm4s5G',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-webcontainers-wasm32': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-webcontainers-wasm32-Dk60UZ1l',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-win32-arm64-7ppyGyzR',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-ia32': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\.sharp-win32-ia32-o463PQYp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@jridgewell\\resolve-uri': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@jridgewell\\.resolve-uri-iKLdUyd4',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@napi-rs\\wasm-runtime': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@napi-rs\\.wasm-runtime-Enpgzbhc',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@quansync\\fs': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@quansync\\.fs-W5lS7XTQ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm-eabi': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-android-arm-eabi-bzIpZ0Vf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-android-arm64-A6xILmVu',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-darwin-arm64-4to4O4i0',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-darwin-x64-LZGzBLNf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-freebsd-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-freebsd-x64-FbR6MNbn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-arm-gnueabihf-yg9Du3m8',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-arm64-gnu-hYpRc3v7',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-arm64-musl-K7Fb9ViY',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-ppc64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-ppc64-gnu-GgyMOnwf',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-s390x-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-s390x-gnu-yGVQIAuv',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-x64-gnu-37rRFdZI',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-linux-x64-musl-I7GOHb7b',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-openharmony-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-openharmony-arm64-vdjZcLPX',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-x64-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-win32-x64-msvc-UFfRskWD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-wasm32-wasi-rUMt28mU',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\pluginutils': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.pluginutils-jlbFzQIh',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@playwright\\test': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@playwright\\.test-BoXtjt9N',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-arm64-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\.binding-win32-arm64-msvc-V0XxiFHz',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm-eabi': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-android-arm-eabi-euzmlOEU',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-android-arm64-iTW8Nbp3',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-android-x64-h8bZKi8F',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-darwin-arm64-KjtxclfT',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-darwin-x64-vRnIRYgC',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-freebsd-arm64-NBIWy5ut',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-freebsd-x64-gfM8XfBd',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-arm-gnueabihf-n2X54BKn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-musleabihf': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-arm-musleabihf-W05YKTQ2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-arm64-gnu-44QyscMD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-arm64-musl-S80OpKrn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-loong64-gnu-wTFrHSzu',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-loong64-musl-Pglfg3g2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-ppc64-gnu-wfOdr3E0',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-ppc64-musl-sTFCoFuW',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-riscv64-gnu-mgNQSBKL',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-riscv64-musl-57kO6cOL',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-s390x-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-s390x-gnu-yQ5aXemd',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-x64-gnu-80vVoYr6',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-musl': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-linux-x64-musl-RWsWY10y',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openbsd-x64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-openbsd-x64-43OcLSUg',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openharmony-arm64': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-openharmony-arm64-EIC25bzN',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-arm64-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-win32-arm64-msvc-3DUiFJYD',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-ia32-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-win32-ia32-msvc-KuRXdy9K',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-x64-gnu': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-win32-x64-gnu-W5fHoXdg',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-x64-msvc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\.rollup-win32-x64-msvc-HJy9Q2vg',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tesseract.js-data\\fil': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tesseract.js-data\\.fil-XNFtI7Wr',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tybys\\wasm-util': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tybys\\.wasm-util-C9dPmrVQ',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\chai': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\.chai-TTYCIsI0',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\deep-eql': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@types\\.deep-eql-PGG59K5e',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vite-pwa\\assets-generator': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vite-pwa\\.assets-generator-CCfGphKR',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitejs\\plugin-react': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitejs\\.plugin-react-43RQO09a',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\mocker': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\.mocker-GoZAUMHm',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\spy': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@vitest\\.spy-gA5ReJ4S',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\acorn': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.acorn-bpjghpJK',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.acorn-r7ISnzBq',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.acorn.cmd-1T0fTa8g',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\acorn.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.acorn.ps1-0N9HKCGx',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\babel-plugin-polyfill-corejs2\\node_modules\\semver': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\babel-plugin-polyfill-corejs2\\node_modules\\.semver-7CZlK4qG',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\ejs': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.ejs-X7o9uOF2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.ejs-gqhDIUJy',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.ejs.cmd-vNuu5awL',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\ejs.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.ejs.ps1-dWu9vXxr',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\filelist\\node_modules\\brace-expansion': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\filelist\\node_modules\\.brace-expansion-s98sZIzp',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\glob': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.glob-GYaxBV1J',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.glob-tx5wuPGs',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.glob.cmd-7NbYwKLH',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\glob.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.glob.ps1-W1c8ejm1',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jake': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.jake-8O7i9dwB',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jake-WKpNbGvw',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jake.cmd-iD3hBGtI',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jake.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jake.ps1-uuPrjkh5',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\jsesc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.jsesc-dT5Cbm87',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jsesc-LzZYqGlP',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jsesc.cmd-hV7MSV9q',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\jsesc.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.jsesc.ps1-ieKxtCUU',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\json5': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.json5-zdMJlEda',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.json5-HBVApPRx',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.json5.cmd-DUJqvNVn',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\json5.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.json5.ps1-p55kFBKM',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\nanoid': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.nanoid-6omLFjRG',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.nanoid-8m9HoCU5',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.nanoid.cmd-LAAOCKvy',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\nanoid.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.nanoid.ps1-LSoE7RWA',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\opencollective-postinstall': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.opencollective-postinstall-wuj9xK15',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.opencollective-postinstall-xw8V029W',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.opencollective-postinstall.cmd-6gxJfVY2',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\opencollective-postinstall.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.opencollective-postinstall.ps1-fohVtxNT',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\terser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.terser-dKpcQFZ7',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.terser-fft8DIc3',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.terser.cmd-h3f88fLh',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\terser.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.terser.ps1-NlGZGaX4',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\which': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.which-uxWDdvAr',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.node-which-ZjTiLL7n',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which.cmd': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.node-which.cmd-n4TQaTpM',
+222 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\node-which.ps1': 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\.bin\\.node-which.ps1-FUgWHmB4'
+222 silly reify }
+223 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-win32-ia32-msvc
+224 silly reify mark deleted [
+224 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+224 silly reify ]
+225 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-win32-arm64-msvc
+226 silly reify mark deleted [
+226 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+226 silly reify ]
+227 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-openharmony-arm64
+228 silly reify mark deleted [
+228 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openharmony-arm64'
+228 silly reify ]
+229 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-openbsd-x64
+230 silly reify mark deleted [
+230 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-openbsd-x64'
+230 silly reify ]
+231 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-x64-musl
+232 silly reify mark deleted [
+232 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-musl'
+232 silly reify ]
+233 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-x64-gnu
+234 silly reify mark deleted [
+234 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+234 silly reify ]
+235 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-s390x-gnu
+236 silly reify mark deleted [
+236 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+236 silly reify ]
+237 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-riscv64-musl
+238 silly reify mark deleted [
+238 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+238 silly reify ]
+239 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-riscv64-gnu
+240 silly reify mark deleted [
+240 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+240 silly reify ]
+241 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-ppc64-musl
+242 silly reify mark deleted [
+242 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+242 silly reify ]
+243 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-ppc64-gnu
+244 silly reify mark deleted [
+244 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+244 silly reify ]
+245 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-loong64-musl
+246 silly reify mark deleted [
+246 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+246 silly reify ]
+247 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-loong64-gnu
+248 silly reify mark deleted [
+248 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+248 silly reify ]
+249 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm64-musl
+250 silly reify mark deleted [
+250 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+250 silly reify ]
+251 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm64-gnu
+252 silly reify mark deleted [
+252 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+252 silly reify ]
+253 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm-musleabihf
+254 silly reify mark deleted [
+254 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+254 silly reify ]
+255 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-linux-arm-gnueabihf
+256 silly reify mark deleted [
+256 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+256 silly reify ]
+257 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-freebsd-x64
+258 silly reify mark deleted [
+258 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-x64'
+258 silly reify ]
+259 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-freebsd-arm64
+260 silly reify mark deleted [
+260 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-freebsd-arm64'
+260 silly reify ]
+261 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-darwin-x64
+262 silly reify mark deleted [
+262 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-x64'
+262 silly reify ]
+263 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-darwin-arm64
+264 silly reify mark deleted [
+264 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-darwin-arm64'
+264 silly reify ]
+265 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-x64
+266 silly reify mark deleted [
+266 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-x64'
+266 silly reify ]
+267 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-arm64
+268 silly reify mark deleted [
+268 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm64'
+268 silly reify ]
+269 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rollup\rollup-android-arm-eabi
+270 silly reify mark deleted [
+270 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rollup\\rollup-android-arm-eabi'
+270 silly reify ]
+271 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-win32-arm64-msvc
+272 silly reify mark deleted [
+272 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+272 silly reify ]
+273 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-wasm32-wasi
+274 silly reify mark deleted [
+274 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi'
+274 silly reify ]
+275 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@emnapi\core
+276 silly reify mark deleted [
+276 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\core'
+276 silly reify ]
+277 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-wasm32-wasi\node_modules\@emnapi\runtime
+278 silly reify mark deleted [
+278 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+278 silly reify ]
+279 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@napi-rs\wasm-runtime
+280 silly reify mark deleted [
+280 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@napi-rs\\wasm-runtime'
+280 silly reify ]
+281 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@emnapi\wasi-threads
+282 silly reify mark deleted [
+282 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@emnapi\\wasi-threads'
+282 silly reify ]
+283 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@tybys\wasm-util
+284 silly reify mark deleted [
+284 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@tybys\\wasm-util'
+284 silly reify ]
+285 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-openharmony-arm64
+286 silly reify mark deleted [
+286 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-openharmony-arm64'
+286 silly reify ]
+287 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-x64-musl
+288 silly reify mark deleted [
+288 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-musl'
+288 silly reify ]
+289 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-x64-gnu
+290 silly reify mark deleted [
+290 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+290 silly reify ]
+291 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-s390x-gnu
+292 silly reify mark deleted [
+292 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+292 silly reify ]
+293 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-ppc64-gnu
+294 silly reify mark deleted [
+294 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+294 silly reify ]
+295 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm64-musl
+296 silly reify mark deleted [
+296 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+296 silly reify ]
+297 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm64-gnu
+298 silly reify mark deleted [
+298 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+298 silly reify ]
+299 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-linux-arm-gnueabihf
+300 silly reify mark deleted [
+300 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+300 silly reify ]
+301 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-freebsd-x64
+302 silly reify mark deleted [
+302 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-freebsd-x64'
+302 silly reify ]
+303 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-darwin-x64
+304 silly reify mark deleted [
+304 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-x64'
+304 silly reify ]
+305 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-darwin-arm64
+306 silly reify mark deleted [
+306 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-darwin-arm64'
+306 silly reify ]
+307 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-android-arm64
+308 silly reify mark deleted [
+308 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm64'
+308 silly reify ]
+309 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@rolldown\binding-android-arm-eabi
+310 silly reify mark deleted [
+310 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@rolldown\\binding-android-arm-eabi'
+310 silly reify ]
+311 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-win32-ia32
+312 silly reify mark deleted [
+312 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-ia32'
+312 silly reify ]
+313 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-win32-arm64
+314 silly reify mark deleted [
+314 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-win32-arm64'
+314 silly reify ]
+315 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-webcontainers-wasm32
+316 silly reify mark deleted [
+316 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-webcontainers-wasm32'
+316 silly reify ]
+317 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linuxmusl-x64
+318 silly reify mark deleted [
+318 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-x64'
+318 silly reify ]
+319 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linuxmusl-arm64
+320 silly reify mark deleted [
+320 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linuxmusl-arm64'
+320 silly reify ]
+321 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-x64
+322 silly reify mark deleted [
+322 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-x64'
+322 silly reify ]
+323 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-s390x
+324 silly reify mark deleted [
+324 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-s390x'
+324 silly reify ]
+325 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-riscv64
+326 silly reify mark deleted [
+326 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-riscv64'
+326 silly reify ]
+327 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-ppc64
+328 silly reify mark deleted [
+328 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-ppc64'
+328 silly reify ]
+329 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-arm64
+330 silly reify mark deleted [
+330 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm64'
+330 silly reify ]
+331 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-linux-arm
+332 silly reify mark deleted [
+332 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-linux-arm'
+332 silly reify ]
+333 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linuxmusl-x64
+334 silly reify mark deleted [
+334 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+334 silly reify ]
+335 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linuxmusl-arm64
+336 silly reify mark deleted [
+336 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+336 silly reify ]
+337 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-x64
+338 silly reify mark deleted [
+338 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-x64'
+338 silly reify ]
+339 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-s390x
+340 silly reify mark deleted [
+340 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-s390x'
+340 silly reify ]
+341 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-riscv64
+342 silly reify mark deleted [
+342 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+342 silly reify ]
+343 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-ppc64
+344 silly reify mark deleted [
+344 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+344 silly reify ]
+345 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-arm64
+346 silly reify mark deleted [
+346 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm64'
+346 silly reify ]
+347 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-linux-arm
+348 silly reify mark deleted [
+348 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-linux-arm'
+348 silly reify ]
+349 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-darwin-x64
+350 silly reify mark deleted [
+350 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-x64'
+350 silly reify ]
+351 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-libvips-darwin-arm64
+352 silly reify mark deleted [
+352 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+352 silly reify ]
+353 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-freebsd-wasm32
+354 silly reify mark deleted [
+354 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-freebsd-wasm32'
+354 silly reify ]
+355 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-darwin-x64
+356 silly reify mark deleted [
+356 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-x64'
+356 silly reify ]
+357 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\@img\sharp-darwin-arm64
+358 silly reify mark deleted [
+358 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\@img\\sharp-darwin-arm64'
+358 silly reify ]
+359 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-win32-arm64-msvc
+360 silly reify mark deleted [
+360 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-win32-arm64-msvc'
+360 silly reify ]
+361 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-x64-musl
+362 silly reify mark deleted [
+362 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-musl'
+362 silly reify ]
+363 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-x64-gnu
+364 silly reify mark deleted [
+364 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-x64-gnu'
+364 silly reify ]
+365 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm64-musl
+366 silly reify mark deleted [
+366 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-musl'
+366 silly reify ]
+367 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm64-gnu
+368 silly reify mark deleted [
+368 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm64-gnu'
+368 silly reify ]
+369 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-linux-arm-gnueabihf
+370 silly reify mark deleted [
+370 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-linux-arm-gnueabihf'
+370 silly reify ]
+371 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-freebsd-x64
+372 silly reify mark deleted [
+372 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-freebsd-x64'
+372 silly reify ]
+373 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-darwin-x64
+374 silly reify mark deleted [
+374 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-x64'
+374 silly reify ]
+375 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-darwin-arm64
+376 silly reify mark deleted [
+376 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-darwin-arm64'
+376 silly reify ]
+377 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\lightningcss-android-arm64
+378 silly reify mark deleted [
+378 silly reify   'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\lightningcss-android-arm64'
+378 silly reify ]
+379 verbose reify failed optional dependency C:\Users\kaixe\Desktop\surfy-frontend\node_modules\fsevents
+380 silly reify mark deleted [ 'C:\\Users\\kaixe\\Desktop\\surfy-frontend\\node_modules\\fsevents' ]
+381 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 1ms (cache hit)
+382 http cache terser@https://registry.npmjs.org/terser/-/terser-5.51.2.tgz 0ms (cache hit)
+383 http cache opencollective-postinstall@https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz 0ms (cache hit)
+384 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz 0ms (cache hit)
+385 http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+386 http cache jake@https://registry.npmjs.org/jake/-/jake-10.9.4.tgz 0ms (cache hit)
+387 http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+388 http cache ejs@https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz 0ms (cache hit)
+389 http cache @vitest/spy@https://registry.npmjs.org/@vitest/spy/-/spy-5.1.0.tgz 0ms (cache hit)
+390 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.19.0.tgz 0ms (cache hit)
+391 http cache @vitest/mocker@https://registry.npmjs.org/@vitest/mocker/-/mocker-5.1.0.tgz 0ms (cache hit)
+392 http cache glob@https://registry.npmjs.org/glob/-/glob-11.1.0.tgz 0ms (cache hit)
+393 http cache @vitejs/plugin-react@https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.3.0.tgz 0ms (cache hit)
+394 http cache @types/deep-eql@https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz 0ms (cache hit)
+395 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.5.tgz 0ms (cache hit)
+396 http cache @types/chai@https://registry.npmjs.org/@types/chai/-/chai-5.2.3.tgz 0ms (cache hit)
+397 http cache @tesseract.js-data/fil@https://registry.npmjs.org/@tesseract.js-data/fil/-/fil-1.0.0.tgz 0ms (cache hit)
+398 http cache @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.1.1.tgz 0ms (cache hit)
+399 http cache @playwright/test@https://registry.npmjs.org/@playwright/test/-/test-1.65.1.tgz 0ms (cache hit)
+400 http cache @rolldown/binding-win32-x64-msvc@https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.19.tgz 0ms (cache hit)
+401 http cache @vite-pwa/assets-generator@https://registry.npmjs.org/@vite-pwa/assets-generator/-/assets-generator-2.0.0.tgz 0ms (cache hit)
+402 http cache @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.3.tgz 0ms (cache hit)
+403 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.2.6.tgz 0ms (cache hit)
+404 http cache @quansync/fs@https://registry.npmjs.org/@quansync/fs/-/fs-1.1.0.tgz 0ms (cache hit)
+405 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-2.2.0.tgz 0ms (cache hit)
+406 http cache @rollup/rollup-win32-x64-gnu@https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.68.4.tgz 0ms (cache hit)
+407 http cache @rollup/rollup-win32-x64-msvc@https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.68.4.tgz 0ms (cache hit)
+408 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-2.0.0-beta.2.tgz 0ms (cache hit)
+409 http cache @fontsource-variable/fraunces@https://registry.npmjs.org/@fontsource-variable/fraunces/-/fraunces-5.3.0.tgz 0ms (cache hit)
+410 http cache @fontsource-variable/outfit@https://registry.npmjs.org/@fontsource-variable/outfit/-/outfit-5.3.0.tgz 0ms (cache hit)
+411 http cache @emailjs/browser@https://registry.npmjs.org/@emailjs/browser/-/browser-5.0.3.tgz 0ms (cache hit)
+412 http cache @canvas/image-data@https://registry.npmjs.org/@canvas/image-data/-/image-data-1.1.0.tgz 0ms (cache hit)
+413 http cache @babel/traverse@https://registry.npmjs.org/@babel/traverse/-/traverse-7.29.14.tgz 0ms (cache hit)
+414 http cache @babel/types@https://registry.npmjs.org/@babel/types/-/types-7.29.14.tgz 0ms (cache hit)
+415 http cache @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.14.tgz 0ms (cache hit)
+416 http cache @babel/preset-env@https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.29.14.tgz 0ms (cache hit)
+417 http cache @babel/plugin-transform-modules-umd@https://registry.npmjs.org/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.29.14.tgz 0ms (cache hit)
+418 http cache @babel/plugin-transform-modules-commonjs@https://registry.npmjs.org/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.29.14.tgz 0ms (cache hit)
+419 http cache @babel/plugin-transform-modules-amd@https://registry.npmjs.org/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.29.14.tgz 0ms (cache hit)
+420 http cache @babel/plugin-transform-for-of@https://registry.npmjs.org/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.29.13.tgz 0ms (cache hit)
+421 http cache @babel/plugin-transform-class-static-block@https://registry.npmjs.org/@babel/plugin-transform-class-static-block/-/plugin-transform-class-static-block-7.29.14.tgz 0ms (cache hit)
+422 http cache @babel/plugin-bugfix-safari-rest-destructuring-rhs-array@https://registry.npmjs.org/@babel/plugin-bugfix-safari-rest-destructuring-rhs-array/-/plugin-bugfix-safari-rest-destructuring-rhs-array-7.29.13.tgz 0ms (cache hit)
+423 http cache @babel/plugin-transform-block-scoping@https://registry.npmjs.org/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.29.13.tgz 0ms (cache hit)
+424 http cache @babel/plugin-transform-destructuring@https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.29.13.tgz 0ms (cache hit)
+425 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.14.tgz 0ms (cache hit)
+426 http cache @babel/helpers@https://registry.npmjs.org/@babel/helpers/-/helpers-7.29.14.tgz 0ms (cache hit)
+427 http cache @babel/helper-wrap-function@https://registry.npmjs.org/@babel/helper-wrap-function/-/helper-wrap-function-7.29.14.tgz 0ms (cache hit)
+428 http cache @babel/helper-skip-transparent-expression-wrappers@https://registry.npmjs.org/@babel/helper-skip-transparent-expression-wrappers/-/helper-skip-transparent-expression-wrappers-7.29.13.tgz 0ms (cache hit)
+429 http cache @babel/helper-string-parser@https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.29.14.tgz 0ms (cache hit)
+430 http cache @babel/helper-module-transforms@https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transforms-7.29.14.tgz 0ms (cache hit)
+431 http cache @babel/helper-create-regexp-features-plugin@https://registry.npmjs.org/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.29.14.tgz 0ms (cache hit)
+432 http cache why-is-node-running@https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-3.2.1.tgz 0ms (cache hit)
+433 http cache @babel/helper-member-expression-to-functions@https://registry.npmjs.org/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.29.14.tgz 0ms (cache hit)
+434 http cache wasm-feature-detect@https://registry.npmjs.org/wasm-feature-detect/-/wasm-feature-detect-1.10.1.tgz 0ms (cache hit)
+435 http cache @babel/helper-create-class-features-plugin@https://registry.npmjs.org/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.29.13.tgz 0ms (cache hit)
+436 http cache @babel/core@https://registry.npmjs.org/@babel/core/-/core-7.29.13.tgz 0ms (cache hit)
+437 http cache @babel/helper-compilation-targets@https://registry.npmjs.org/@babel/helper-compilation-targets/-/helper-compilation-targets-7.29.13.tgz 0ms (cache hit)
+438 http cache @babel/generator@https://registry.npmjs.org/@babel/generator/-/generator-7.29.14.tgz 0ms (cache hit)
+439 http cache vite-plugin-pwa@https://registry.npmjs.org/vite-plugin-pwa/-/vite-plugin-pwa-2.0.0.tgz 0ms (cache hit)
+440 http cache vitest@https://registry.npmjs.org/vitest/-/vitest-5.1.0.tgz 0ms (cache hit)
+441 http cache vite@https://registry.npmjs.org/vite/-/vite-8.3.8.tgz 0ms (cache hit)
+442 http cache unconfig-core@https://registry.npmjs.org/unconfig-core/-/unconfig-core-7.5.0.tgz 0ms (cache hit)
+443 http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.4.0.tgz 0ms (cache hit)
+444 http cache unconfig@https://registry.npmjs.org/unconfig/-/unconfig-7.5.0.tgz 0ms (cache hit)
+445 http cache ts-interface-checker@https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz 0ms (cache hit)
+446 http cache to-data-view@https://registry.npmjs.org/to-data-view/-/to-data-view-1.1.0.tgz 0ms (cache hit)
+447 http cache tldts-core@https://registry.npmjs.org/tldts-core/-/tldts-core-7.5.4.tgz 0ms (cache hit)
+448 http cache tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.1.tgz 0ms (cache hit)
+449 http cache tinybench@https://registry.npmjs.org/tinybench/-/tinybench-6.2.3.tgz 0ms (cache hit)
+450 http cache tldts@https://registry.npmjs.org/tldts/-/tldts-7.5.4.tgz 0ms (cache hit)
+451 http cache tesseract.js@https://registry.npmjs.org/tesseract.js/-/tesseract.js-7.0.0.tgz 0ms (cache hit)
+452 http cache tesseract.js-core@https://registry.npmjs.org/tesseract.js-core/-/tesseract.js-core-7.0.0.tgz 0ms (cache hit)
+453 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz 0ms (cache hit)
+454 http cache sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.1.tgz 0ms (cache hit)
+455 http cache std-env@https://registry.npmjs.org/std-env/-/std-env-4.3.0.tgz 0ms (cache hit)
+456 http cache sharp-ico@https://registry.npmjs.org/sharp-ico/-/sharp-ico-0.1.5.tgz 0ms (cache hit)
+457 http cache rollup@https://registry.npmjs.org/rollup/-/rollup-4.68.4.tgz 0ms (cache hit)
+458 http cache semver@https://registry.npmjs.org/semver/-/semver-7.8.6.tgz 0ms (cache hit)
+459 http cache scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz 0ms (cache hit)
+460 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.14.tgz 0ms (cache hit)
+461 http cache rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.2.19.tgz 0ms (cache hit)
+462 http cache regjsparser@https://registry.npmjs.org/regjsparser/-/regjsparser-0.14.1.tgz 0ms (cache hit)
+463 http cache react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz 0ms (cache hit)
+464 http cache regexpu-core@https://registry.npmjs.org/regexpu-core/-/regexpu-core-6.5.4.tgz 0ms (cache hit)
+465 http cache read-cache@https://registry.npmjs.org/read-cache/-/read-cache-1.0.2.tgz 0ms (cache hit)
+466 http cache quansync@https://registry.npmjs.org/quansync/-/quansync-1.0.0.tgz 0ms (cache hit)
+467 http cache react@https://registry.npmjs.org/react/-/react-18.3.1.tgz 0ms (cache hit)
+468 http cache pretty-bytes@https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-6.1.1.tgz 0ms (cache hit)
+469 http cache postcss-selector-parser@https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.1.6.tgz 0ms (cache hit)
+470 http cache postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz 0ms (cache hit)
+471 http cache postcss-load-config@https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-6.0.1.tgz 0ms (cache hit)
+472 http cache postcss-nested@https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.2.0.tgz 0ms (cache hit)
+473 http cache postcss-js@https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz 0ms (cache hit)
+474 http cache postcss-import@https://registry.npmjs.org/postcss-import/-/postcss-import-15.1.0.tgz 0ms (cache hit)
+475 http cache playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.65.1.tgz 0ms (cache hit)
+476 http cache playwright@https://registry.npmjs.org/playwright/-/playwright-1.65.1.tgz 0ms (cache hit)
+477 http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.33.tgz 0ms (cache hit)
+478 http cache obug@https://registry.npmjs.org/obug/-/obug-3.0.0.tgz 0ms (cache hit)
+479 http cache object-hash@https://registry.npmjs.org/object-hash/-/object-hash-3.0.0.tgz 0ms (cache hit)
+480 http cache pirates@https://registry.npmjs.org/pirates/-/pirates-4.0.7.tgz 0ms (cache hit)
+481 http cache node-releases@https://registry.npmjs.org/node-releases/-/node-releases-2.0.64.tgz 0ms (cache hit)
+482 http cache magic-string@https://registry.npmjs.org/magic-string/-/magic-string-1.4.5.tgz 0ms (cache hit)
+483 http cache lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.73.0.tgz 0ms (cache hit)
+484 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+485 http cache lilconfig@https://registry.npmjs.org/lilconfig/-/lilconfig-3.1.5.tgz 0ms (cache hit)
+486 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz 0ms (cache hit)
+487 http cache is-core-module@https://registry.npmjs.org/is-core-module/-/is-core-module-2.18.0.tgz 0ms (cache hit)
+488 http cache graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.12.tgz 0ms (cache hit)
+489 http cache fraction.js@https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz 0ms (cache hit)
+490 http cache fastq@https://registry.npmjs.org/fastq/-/fastq-1.20.3.tgz 0ms (cache hit)
+491 http cache estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz 0ms (cache hit)
+492 http cache ico-endec@https://registry.npmjs.org/ico-endec/-/ico-endec-0.1.6.tgz 0ms (cache hit)
+493 http cache expect-type@https://registry.npmjs.org/expect-type/-/expect-type-1.4.0.tgz 0ms (cache hit)
+494 http cache es-module-lexer@https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.3.2.tgz 0ms (cache hit)
+495 http cache dlv@https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz 0ms (cache hit)
+496 http cache electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.487.tgz 0ms (cache hit)
+497 http cache didyoumean@https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz 0ms (cache hit)
+498 http cache defu@https://registry.npmjs.org/defu/-/defu-6.1.7.tgz 0ms (cache hit)
+499 http cache decode-ico@https://registry.npmjs.org/decode-ico/-/decode-ico-0.4.1.tgz 0ms (cache hit)
+500 http cache decode-bmp@https://registry.npmjs.org/decode-bmp/-/decode-bmp-0.2.1.tgz 0ms (cache hit)
+501 http cache consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 0ms (cache hit)
+502 http cache chai@https://registry.npmjs.org/chai/-/chai-6.3.0.tgz 0ms (cache hit)
+503 http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001826.tgz 0ms (cache hit)
+504 http cache camelcase-css@https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz 0ms (cache hit)
+505 http cache cac@https://registry.npmjs.org/cac/-/cac-7.1.0.tgz 0ms (cache hit)
+506 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.29.6.tgz 0ms (cache hit)
+507 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.13.tgz 0ms (cache hit)
+508 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.11.38.tgz 0ms (cache hit)
+509 http cache autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.6.2.tgz 0ms (cache hit)
+510 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.8.tgz 0ms (cache hit)
+511 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+512 http cache assertion-error@https://registry.npmjs.org/assertion-error/-/assertion-error-2.0.1.tgz 0ms (cache hit)
+513 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-2.0.0-beta.2.tgz 0ms (cache hit)
+514 http cache arg@https://registry.npmjs.org/arg/-/arg-5.0.2.tgz 0ms (cache hit)
+515 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+516 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+517 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+518 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+519 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz 0ms (cache hit)
+520 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz 0ms (cache hit)
+521 silly tarball no local data for which@https://registry.npmjs.org/which/-/which-2.0.2.tgz. Extracting by manifest.
+522 silly tarball no local data for terser@https://registry.npmjs.org/terser/-/terser-5.51.2.tgz. Extracting by manifest.
+523 silly tarball no local data for opencollective-postinstall@https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz. Extracting by manifest.
+524 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz. Extracting by manifest.
+525 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz. Extracting by manifest.
+526 silly tarball no local data for jake@https://registry.npmjs.org/jake/-/jake-10.9.4.tgz. Extracting by manifest.
+527 silly tarball no local data for jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz. Extracting by manifest.
+528 silly tarball no local data for ejs@https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz. Extracting by manifest.
+529 silly tarball no local data for @vitest/spy@https://registry.npmjs.org/@vitest/spy/-/spy-5.1.0.tgz. Extracting by manifest.
+530 silly tarball no local data for acorn@https://registry.npmjs.org/acorn/-/acorn-8.19.0.tgz. Extracting by manifest.
+531 silly tarball no local data for @vitest/mocker@https://registry.npmjs.org/@vitest/mocker/-/mocker-5.1.0.tgz. Extracting by manifest.
+532 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-11.1.0.tgz. Extracting by manifest.
+533 silly tarball no local data for @vitejs/plugin-react@https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.3.0.tgz. Extracting by manifest.
+534 silly tarball no local data for @types/deep-eql@https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz. Extracting by manifest.
+535 silly tarball no local data for @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.5.tgz. Extracting by manifest.
+536 silly tarball no local data for @types/chai@https://registry.npmjs.org/@types/chai/-/chai-5.2.3.tgz. Extracting by manifest.
+537 silly tarball no local data for @tesseract.js-data/fil@https://registry.npmjs.org/@tesseract.js-data/fil/-/fil-1.0.0.tgz. Extracting by manifest.
+538 silly tarball no local data for @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.1.1.tgz. Extracting by manifest.
+539 silly tarball no local data for @playwright/test@https://registry.npmjs.org/@playwright/test/-/test-1.65.1.tgz. Extracting by manifest.
+540 silly tarball no local data for @rolldown/binding-win32-x64-msvc@https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.19.tgz. Extracting by manifest.
+541 silly tarball no local data for @vite-pwa/assets-generator@https://registry.npmjs.org/@vite-pwa/assets-generator/-/assets-generator-2.0.0.tgz. Extracting by manifest.
+542 silly tarball no local data for @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.3.tgz. Extracting by manifest.
+543 silly tarball no local data for @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.2.6.tgz. Extracting by manifest.
+544 silly tarball no local data for @quansync/fs@https://registry.npmjs.org/@quansync/fs/-/fs-1.1.0.tgz. Extracting by manifest.
+545 silly tarball no local data for @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-2.2.0.tgz. Extracting by manifest.
+546 silly tarball no local data for @rollup/rollup-win32-x64-gnu@https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.68.4.tgz. Extracting by manifest.
+547 silly tarball no local data for @rollup/rollup-win32-x64-msvc@https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.68.4.tgz. Extracting by manifest.
+548 silly tarball no local data for @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-2.0.0-beta.2.tgz. Extracting by manifest.
+549 silly tarball no local data for @fontsource-variable/fraunces@https://registry.npmjs.org/@fontsource-variable/fraunces/-/fraunces-5.3.0.tgz. Extracting by manifest.
+550 silly tarball no local data for @fontsource-variable/outfit@https://registry.npmjs.org/@fontsource-variable/outfit/-/outfit-5.3.0.tgz. Extracting by manifest.
+551 silly tarball no local data for @emailjs/browser@https://registry.npmjs.org/@emailjs/browser/-/browser-5.0.3.tgz. Extracting by manifest.
+552 silly tarball no local data for @canvas/image-data@https://registry.npmjs.org/@canvas/image-data/-/image-data-1.1.0.tgz. Extracting by manifest.
+553 silly tarball no local data for @babel/traverse@https://registry.npmjs.org/@babel/traverse/-/traverse-7.29.14.tgz. Extracting by manifest.
+554 silly tarball no local data for @babel/types@https://registry.npmjs.org/@babel/types/-/types-7.29.14.tgz. Extracting by manifest.
+555 silly tarball no local data for @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.14.tgz. Extracting by manifest.
+556 silly tarball no local data for @babel/preset-env@https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.29.14.tgz. Extracting by manifest.
+557 silly tarball no local data for @babel/plugin-transform-modules-umd@https://registry.npmjs.org/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.29.14.tgz. Extracting by manifest.
+558 silly tarball no local data for @babel/plugin-transform-modules-commonjs@https://registry.npmjs.org/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.29.14.tgz. Extracting by manifest.
+559 silly tarball no local data for @babel/plugin-transform-modules-amd@https://registry.npmjs.org/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.29.14.tgz. Extracting by manifest.
+560 silly tarball no local data for @babel/plugin-transform-for-of@https://registry.npmjs.org/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.29.13.tgz. Extracting by manifest.
+561 silly tarball no local data for @babel/plugin-transform-class-static-block@https://registry.npmjs.org/@babel/plugin-transform-class-static-block/-/plugin-transform-class-static-block-7.29.14.tgz. Extracting by manifest.
+562 silly tarball no local data for @babel/plugin-bugfix-safari-rest-destructuring-rhs-array@https://registry.npmjs.org/@babel/plugin-bugfix-safari-rest-destructuring-rhs-array/-/plugin-bugfix-safari-rest-destructuring-rhs-array-7.29.13.tgz. Extracting by manifest.
+563 silly tarball no local data for @babel/plugin-transform-block-scoping@https://registry.npmjs.org/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.29.13.tgz. Extracting by manifest.
+564 silly tarball no local data for @babel/plugin-transform-destructuring@https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.29.13.tgz. Extracting by manifest.
+565 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.14.tgz. Extracting by manifest.
+566 silly tarball no local data for @babel/helpers@https://registry.npmjs.org/@babel/helpers/-/helpers-7.29.14.tgz. Extracting by manifest.
+567 silly tarball no local data for @babel/helper-wrap-function@https://registry.npmjs.org/@babel/helper-wrap-function/-/helper-wrap-function-7.29.14.tgz. Extracting by manifest.
+568 silly tarball no local data for @babel/helper-skip-transparent-expression-wrappers@https://registry.npmjs.org/@babel/helper-skip-transparent-expression-wrappers/-/helper-skip-transparent-expression-wrappers-7.29.13.tgz. Extracting by manifest.
+569 silly tarball no local data for @babel/helper-string-parser@https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.29.14.tgz. Extracting by manifest.
+570 silly tarball no local data for @babel/helper-module-transforms@https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transforms-7.29.14.tgz. Extracting by manifest.
+571 silly tarball no local data for @babel/helper-create-regexp-features-plugin@https://registry.npmjs.org/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.29.14.tgz. Extracting by manifest.
+572 silly tarball no local data for why-is-node-running@https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-3.2.1.tgz. Extracting by manifest.
+573 silly tarball no local data for @babel/helper-member-expression-to-functions@https://registry.npmjs.org/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.29.14.tgz. Extracting by manifest.
+574 silly tarball no local data for wasm-feature-detect@https://registry.npmjs.org/wasm-feature-detect/-/wasm-feature-detect-1.10.1.tgz. Extracting by manifest.
+575 silly tarball no local data for @babel/helper-create-class-features-plugin@https://registry.npmjs.org/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.29.13.tgz. Extracting by manifest.
+576 silly tarball no local data for @babel/core@https://registry.npmjs.org/@babel/core/-/core-7.29.13.tgz. Extracting by manifest.
+577 silly tarball no local data for @babel/helper-compilation-targets@https://registry.npmjs.org/@babel/helper-compilation-targets/-/helper-compilation-targets-7.29.13.tgz. Extracting by manifest.
+578 silly tarball no local data for @babel/generator@https://registry.npmjs.org/@babel/generator/-/generator-7.29.14.tgz. Extracting by manifest.
+579 silly tarball no local data for vite-plugin-pwa@https://registry.npmjs.org/vite-plugin-pwa/-/vite-plugin-pwa-2.0.0.tgz. Extracting by manifest.
+580 silly tarball no local data for vitest@https://registry.npmjs.org/vitest/-/vitest-5.1.0.tgz. Extracting by manifest.
+581 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-8.3.8.tgz. Extracting by manifest.
+582 silly tarball no local data for unconfig-core@https://registry.npmjs.org/unconfig-core/-/unconfig-core-7.5.0.tgz. Extracting by manifest.
+583 silly tarball no local data for update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.4.0.tgz. Extracting by manifest.
+584 silly tarball no local data for unconfig@https://registry.npmjs.org/unconfig/-/unconfig-7.5.0.tgz. Extracting by manifest.
+585 silly tarball no local data for ts-interface-checker@https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz. Extracting by manifest.
+586 silly tarball no local data for to-data-view@https://registry.npmjs.org/to-data-view/-/to-data-view-1.1.0.tgz. Extracting by manifest.
+587 silly tarball no local data for tldts-core@https://registry.npmjs.org/tldts-core/-/tldts-core-7.5.4.tgz. Extracting by manifest.
+588 silly tarball no local data for tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.1.tgz. Extracting by manifest.
+589 silly tarball no local data for tinybench@https://registry.npmjs.org/tinybench/-/tinybench-6.2.3.tgz. Extracting by manifest.
+590 silly tarball no local data for tldts@https://registry.npmjs.org/tldts/-/tldts-7.5.4.tgz. Extracting by manifest.
+591 silly tarball no local data for tesseract.js@https://registry.npmjs.org/tesseract.js/-/tesseract.js-7.0.0.tgz. Extracting by manifest.
+592 silly tarball no local data for tesseract.js-core@https://registry.npmjs.org/tesseract.js-core/-/tesseract.js-core-7.0.0.tgz. Extracting by manifest.
+593 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz. Extracting by manifest.
+594 silly tarball no local data for sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.1.tgz. Extracting by manifest.
+595 silly tarball no local data for std-env@https://registry.npmjs.org/std-env/-/std-env-4.3.0.tgz. Extracting by manifest.
+596 silly tarball no local data for sharp-ico@https://registry.npmjs.org/sharp-ico/-/sharp-ico-0.1.5.tgz. Extracting by manifest.
+597 silly tarball no local data for rollup@https://registry.npmjs.org/rollup/-/rollup-4.68.4.tgz. Extracting by manifest.
+598 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.8.6.tgz. Extracting by manifest.
+599 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz. Extracting by manifest.
+600 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.14.tgz. Extracting by manifest.
+601 silly tarball no local data for rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.2.19.tgz. Extracting by manifest.
+602 silly tarball no local data for regjsparser@https://registry.npmjs.org/regjsparser/-/regjsparser-0.14.1.tgz. Extracting by manifest.
+603 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz. Extracting by manifest.
+604 silly tarball no local data for regexpu-core@https://registry.npmjs.org/regexpu-core/-/regexpu-core-6.5.4.tgz. Extracting by manifest.
+605 silly tarball no local data for read-cache@https://registry.npmjs.org/read-cache/-/read-cache-1.0.2.tgz. Extracting by manifest.
+606 silly tarball no local data for quansync@https://registry.npmjs.org/quansync/-/quansync-1.0.0.tgz. Extracting by manifest.
+607 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-18.3.1.tgz. Extracting by manifest.
+608 silly tarball no local data for pretty-bytes@https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-6.1.1.tgz. Extracting by manifest.
+609 silly tarball no local data for postcss-selector-parser@https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.1.6.tgz. Extracting by manifest.
+610 silly tarball no local data for postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz. Extracting by manifest.
+611 silly tarball no local data for postcss-load-config@https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-6.0.1.tgz. Extracting by manifest.
+612 silly tarball no local data for postcss-nested@https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.2.0.tgz. Extracting by manifest.
+613 silly tarball no local data for postcss-js@https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz. Extracting by manifest.
+614 silly tarball no local data for postcss-import@https://registry.npmjs.org/postcss-import/-/postcss-import-15.1.0.tgz. Extracting by manifest.
+615 silly tarball no local data for playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.65.1.tgz. Extracting by manifest.
+616 silly tarball no local data for playwright@https://registry.npmjs.org/playwright/-/playwright-1.65.1.tgz. Extracting by manifest.
+617 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.33.tgz. Extracting by manifest.
+618 silly tarball no local data for obug@https://registry.npmjs.org/obug/-/obug-3.0.0.tgz. Extracting by manifest.
+619 silly tarball no local data for object-hash@https://registry.npmjs.org/object-hash/-/object-hash-3.0.0.tgz. Extracting by manifest.
+620 silly tarball no local data for pirates@https://registry.npmjs.org/pirates/-/pirates-4.0.7.tgz. Extracting by manifest.
+621 silly tarball no local data for node-releases@https://registry.npmjs.org/node-releases/-/node-releases-2.0.64.tgz. Extracting by manifest.
+622 silly tarball no local data for magic-string@https://registry.npmjs.org/magic-string/-/magic-string-1.4.5.tgz. Extracting by manifest.
+623 silly tarball no local data for lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.73.0.tgz. Extracting by manifest.
+624 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+625 silly tarball no local data for lilconfig@https://registry.npmjs.org/lilconfig/-/lilconfig-3.1.5.tgz. Extracting by manifest.
+626 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz. Extracting by manifest.
+627 silly tarball no local data for is-core-module@https://registry.npmjs.org/is-core-module/-/is-core-module-2.18.0.tgz. Extracting by manifest.
+628 silly tarball no local data for graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.12.tgz. Extracting by manifest.
+629 silly tarball no local data for fraction.js@https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz. Extracting by manifest.
+630 silly tarball no local data for fastq@https://registry.npmjs.org/fastq/-/fastq-1.20.3.tgz. Extracting by manifest.
+631 silly tarball no local data for estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz. Extracting by manifest.
+632 silly tarball no local data for ico-endec@https://registry.npmjs.org/ico-endec/-/ico-endec-0.1.6.tgz. Extracting by manifest.
+633 silly tarball no local data for expect-type@https://registry.npmjs.org/expect-type/-/expect-type-1.4.0.tgz. Extracting by manifest.
+634 silly tarball no local data for es-module-lexer@https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.3.2.tgz. Extracting by manifest.
+635 silly tarball no local data for dlv@https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz. Extracting by manifest.
+636 silly tarball no local data for electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.487.tgz. Extracting by manifest.
+637 silly tarball no local data for didyoumean@https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz. Extracting by manifest.
+638 silly tarball no local data for defu@https://registry.npmjs.org/defu/-/defu-6.1.7.tgz. Extracting by manifest.
+639 silly tarball no local data for decode-ico@https://registry.npmjs.org/decode-ico/-/decode-ico-0.4.1.tgz. Extracting by manifest.
+640 silly tarball no local data for decode-bmp@https://registry.npmjs.org/decode-bmp/-/decode-bmp-0.2.1.tgz. Extracting by manifest.
+641 silly tarball no local data for consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz. Extracting by manifest.
+642 silly tarball no local data for chai@https://registry.npmjs.org/chai/-/chai-6.3.0.tgz. Extracting by manifest.
+643 silly tarball no local data for caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001826.tgz. Extracting by manifest.
+644 silly tarball no local data for camelcase-css@https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz. Extracting by manifest.
+645 silly tarball no local data for cac@https://registry.npmjs.org/cac/-/cac-7.1.0.tgz. Extracting by manifest.
+646 silly tarball no local data for browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.29.6.tgz. Extracting by manifest.
+647 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.13.tgz. Extracting by manifest.
+648 silly tarball no local data for baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.11.38.tgz. Extracting by manifest.
+649 silly tarball no local data for autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.6.2.tgz. Extracting by manifest.
+650 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.8.tgz. Extracting by manifest.
+651 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+652 silly tarball no local data for assertion-error@https://registry.npmjs.org/assertion-error/-/assertion-error-2.0.1.tgz. Extracting by manifest.
+653 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-2.0.0-beta.2.tgz. Extracting by manifest.
+654 silly tarball no local data for arg@https://registry.npmjs.org/arg/-/arg-5.0.2.tgz. Extracting by manifest.
+655 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+656 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+657 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+658 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+659 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.2.tgz. Extracting by manifest.
+660 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz. Extracting by manifest.
+661 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 1 failed with EACCES
+662 http fetch GET https://registry.npmjs.org/terser/-/terser-5.51.2.tgz attempt 1 failed with EACCES
+663 http fetch GET https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz attempt 1 failed with EACCES
+664 http fetch GET https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz attempt 1 failed with EACCES
+665 http fetch GET https://registry.npmjs.org/json5/-/json5-2.2.3.tgz attempt 1 failed with EACCES
+666 http fetch GET https://registry.npmjs.org/jake/-/jake-10.9.4.tgz attempt 1 failed with EACCES
+667 http fetch GET https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz attempt 1 failed with EACCES
+668 http fetch GET https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz attempt 1 failed with EACCES
+669 http fetch GET https://registry.npmjs.org/@vitest/spy/-/spy-5.1.0.tgz attempt 1 failed with EACCES
+670 http fetch GET https://registry.npmjs.org/acorn/-/acorn-8.19.0.tgz attempt 1 failed with EACCES
+671 http fetch GET https://registry.npmjs.org/@vitest/mocker/-/mocker-5.1.0.tgz attempt 1 failed with EACCES
+672 http fetch GET https://registry.npmjs.org/glob/-/glob-11.1.0.tgz attempt 1 failed with EACCES
+673 http fetch GET https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.3.0.tgz attempt 1 failed with EACCES
+674 http fetch GET https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz attempt 1 failed with EACCES
+675 http fetch GET https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.5.tgz attempt 1 failed with EACCES
+676 http fetch GET https://registry.npmjs.org/npm attempt 2 failed with EACCES
+677 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 2 failed with EACCES
+678 http fetch GET https://registry.npmjs.org/terser/-/terser-5.51.2.tgz attempt 2 failed with EACCES
+679 http fetch GET https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz attempt 2 failed with EACCES
+680 http fetch GET https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz attempt 2 failed with EACCES
+681 http fetch GET https://registry.npmjs.org/json5/-/json5-2.2.3.tgz attempt 2 failed with EACCES
+682 http fetch GET https://registry.npmjs.org/jake/-/jake-10.9.4.tgz attempt 2 failed with EACCES
+683 http fetch GET https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz attempt 2 failed with EACCES
+684 http fetch GET https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz attempt 2 failed with EACCES
+685 http fetch GET https://registry.npmjs.org/@vitest/spy/-/spy-5.1.0.tgz attempt 2 failed with EACCES
+686 http fetch GET https://registry.npmjs.org/acorn/-/acorn-8.19.0.tgz attempt 2 failed with EACCES
+687 http fetch GET https://registry.npmjs.org/@vitest/mocker/-/mocker-5.1.0.tgz attempt 2 failed with EACCES
+688 http fetch GET https://registry.npmjs.org/glob/-/glob-11.1.0.tgz attempt 2 failed with EACCES
+689 http fetch GET https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.3.0.tgz attempt 2 failed with EACCES
+690 http fetch GET https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz attempt 2 failed with EACCES
+691 http fetch GET https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.5.tgz attempt 2 failed with EACCES

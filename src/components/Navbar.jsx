@@ -68,6 +68,7 @@ export default function Navbar({
                 <WifiOff aria-hidden="true" size={17} strokeWidth={2} />
               )}
               <span>{isOnline ? t('nav.online') : t('nav.offline')}</span>
+              <ChevronDown className="connection-chevron" aria-hidden="true" size={12} />
             </button>
             {isOnlinePopoverOpen && (
               <div className="online-popover" id={onlinePopoverId} role="dialog" aria-label={t('check.offlineOnly')}>
