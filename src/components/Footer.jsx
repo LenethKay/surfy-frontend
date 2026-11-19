@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 
 import { useSiteTour } from './WelcomeExperience.jsx';
+import { usePrivacyNotice } from '../privacy/PrivacyContext.jsx';
 import './Footer.css';
 
 const FOOTER_LINKS = [
@@ -27,6 +28,7 @@ const FOOTER_LINKS = [
 
 export default function Footer({ t }) {
   const startTour = useSiteTour();
+  const { reviewNotice } = usePrivacyNotice();
 
   return (
     <footer className="site-footer" id="site-footer">
@@ -139,6 +141,9 @@ export default function Footer({ t }) {
             <span className="footer-bottom-dot">•</span>
 
             <span>{t('footer.note')}</span>
+            <button className="footer-privacy-link" type="button" onClick={reviewNotice}>
+              {t('notice.reopen')}
+            </button>
           </div>
 
           <a
