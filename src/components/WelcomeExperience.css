@@ -126,6 +126,7 @@
   display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px;
   margin-left: 18px; padding: 8px 0; border: 0; background: transparent; color: #c9e2ff; font-size: 14px; cursor: pointer;
 }
+.hero-content .hero-tour-start { display: flex; width: max-content; min-height: 40px; margin: 14px auto 0; }
 .hero-tour-start:hover { color: #fff; }
 .surfy-cursor > .cursor-avatar {
   position: absolute; top: 15px; left: 16px; width: 34px; height: 34px; overflow: hidden;
@@ -192,6 +193,16 @@
 }
 @media (prefers-reduced-motion: no-preference) {
   .tour-message { animation: surfare-page-open .45s var(--intro-ease) both; }
+}
+@media (max-width: 640px) and (max-height: 650px) {
+  .tour-dock-inner { padding: 12px; }
+  .tour-face { top: 12px; left: 12px; width: 36px; height: 36px; }
+  .tour-face img { width: 68px; height: 68px; transform: translate(-17px, -4px); }
+  .tour-message { padding-left: 0; }
+  .tour-step-count { margin-left: 46px; font-size: 11px; }
+  .tour-message h2 { margin-left: 46px; font-size: 15px; line-height: 1.25; }
+  .tour-message > p:last-child { max-height: 4.2em; overflow-y: auto; line-height: 1.4; pointer-events: auto; scrollbar-width: thin; }
+  .tour-controls { margin-top: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .surfare-intro, .intro-wordmark::before, .intro-handle, .site-experience.is-opening .experience-page,

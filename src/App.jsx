@@ -13,6 +13,7 @@ import { getSurfyAnswer } from './surfy/templates.js';
 import { htmlLanguage, translate } from './i18n/useI18n.js';
 import useScrollReveal from './useScrollReveal.js';
 import WelcomeExperience from './components/WelcomeExperience.jsx';
+import BottomShortcuts from './components/BottomShortcuts.jsx';
 
 const LANGUAGES = ['en', 'tl', 'taglish'];
 
@@ -153,6 +154,7 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [errorKey, setErrorKey] = useState('');
   const [isAskOpen, setIsAskOpen] = useState(false);
+  const [surfyOpenRequest, setSurfyOpenRequest] = useState(0);
   const [isAskClosing, setIsAskClosing] = useState(false);
   const [isAskThinking, setIsAskThinking] = useState(false);
   const [askMessages, setAskMessages] = useState([]);
@@ -369,6 +371,25 @@ export default function App() {
     scheduleAskAnswer();
   }, [result, scheduleAskAnswer, t]);
 
+  const openSurfy = useCallback(() => {
+    window.clearTimeout(askOpenTimer.current);
+    setIsAskClosing(false);
+    setIsAskOpen(true);
+    setSurfyOpenRequest((current) => current + 1);
+    window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+      const panel = document.querySelector('.ask-panel-position');
+      const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 56;
+      const dockHeight = document.querySelector('.bottom-shortcuts')?.getBoundingClientRect().height ?? 80;
+      const tall = panel && panel.getBoundingClientRect().height > innerHeight - headerHeight - dockHeight - 40;
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+      if (tall) {
+        const form = panel.querySelector('.ask-form').getBoundingClientRect();
+        const dockTop = document.querySelector('.bottom-shortcuts')?.getBoundingClientRect().top ?? innerHeight - 96;
+        window.scrollTo({ top: Math.max(0, window.scrollY + form.bottom - dockTop + 20), behavior });
+      } else panel?.scrollIntoView({ block: 'center', behavior });
+    }));
+  }, []);
+
   const openFeedback = useCallback((type = activeTab) => {
     setFeedbackType(type);
     setIsFeedbackOpen(true);
@@ -384,8 +405,7 @@ export default function App() {
   }, [activeTab, openFeedback, reset, status]);
   const closeFeedback = useCallback(() => {
     setIsFeedbackOpen(false);
-    reset();
-  }, [reset]);
+  }, []);
   const camera = useMemo(
     () => (cameraTarget ? (
       <CameraModal
@@ -431,6 +451,7 @@ export default function App() {
           isAskThinking={isAskThinking}
           askMessages={askMessages}
           onAskSend={handleAskSend}
+          surfyOpenRequest={surfyOpenRequest}
           feedbackDialog={isFeedbackOpen ? (
             <FeedbackModal
               isOpen={isFeedbackOpen}
@@ -453,6 +474,8 @@ export default function App() {
         <RiskLevels t={t} />
       </main>
       <Footer t={t} />
+      <BottomShortcuts t={t} onOpenSurfy={openSurfy} onOpenFeedback={openFeedback}
+        isModalOpen={isFeedbackOpen || Boolean(cameraTarget)} />
       {camera}
     </div>
     </WelcomeExperience>
