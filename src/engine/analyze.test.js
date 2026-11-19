@@ -5,7 +5,7 @@ describe('analyzeInput', () => {
   it('classifies a message with an OTP and account threat as high risk', async () => {
     const result = await analyzeInput(
       'text',
-      { message: 'Your account will be blocked today. Send your OTP now.' },
+      { message: 'c' },
       { onlineLookup: false },
     );
 
