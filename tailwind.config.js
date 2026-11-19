@@ -16,21 +16,21 @@ export default {
           100: '#E6F0FF',
         },
         orange: {
-          500: '#F08A3C',
-          400: '#F7A35E',
+          500: '#d23f3c',
+          400: '#d23f3c',
         },
         cream: {
           50: '#FAF3E8',
         },
         peach: {
-          100: '#FFE8D2',
+          100: '#fff0ef',
         },
         logo: {
-          red: '#D23F3C',
+          red: '#d23f3c',
         },
         risk: {
           low: '#2FAE6B',
-          medium: '#F2B632',
+          medium: '#d23f3c',
           high: '#D92D3A',
           unknown: '#8A94A6',
         },

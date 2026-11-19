@@ -11,6 +11,8 @@ import RiskLevels from './components/RiskLevels.jsx';
 import { analyzeInput } from './engine/analyze.js';
 import { getSurfyAnswer } from './surfy/templates.js';
 import { htmlLanguage, translate } from './i18n/useI18n.js';
+import useScrollReveal from './useScrollReveal.js';
+import WelcomeExperience from './components/WelcomeExperience.jsx';
 
 const LANGUAGES = ['en', 'tl', 'taglish'];
 
@@ -133,6 +135,7 @@ function demoResult(scenario, checkedText) {
 }
 
 export default function App() {
+  useScrollReveal();
   const [lang, setLang] = useState(useInitialLanguage);
   const t = useCallback((key, values) => translate(lang, key, values), [lang]);
   const [isOnline, setIsOnline] = useState(() => navigator.onLine);
@@ -400,6 +403,7 @@ export default function App() {
   );
 
   return (
+    <WelcomeExperience t={t}>
     <div className="app-bg">
       <Navbar
         lang={lang}
@@ -451,5 +455,6 @@ export default function App() {
       <Footer t={t} />
       {camera}
     </div>
+    </WelcomeExperience>
   );
 }
