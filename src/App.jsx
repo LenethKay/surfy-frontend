@@ -12,8 +12,10 @@ import { analyzeInput } from './engine/analyze.js';
 import { getSurfyAnswer } from './surfy/templates.js';
 import { htmlLanguage, translate } from './i18n/useI18n.js';
 import useScrollReveal from './useScrollReveal.js';
+import useFluidMotion from './useFluidMotion.js';
+import { usePrivacyNotice } from './privacy/PrivacyContext.jsx';
 import WelcomeExperience from './components/WelcomeExperience.jsx';
-import BottomShortcuts from './components/BottomShortcuts.jsx';
+import useConnectionStatus from './useConnectionStatus.js';
 
 const LANGUAGES = ['en', 'tl', 'taglish'];
 
@@ -114,8 +116,12 @@ const DEMO_ALIASES = {
 };
 
 function useInitialLanguage() {
-  const savedLanguage = window.localStorage.getItem('surfare-language');
-  return LANGUAGES.includes(savedLanguage) ? savedLanguage : 'en';
+  try {
+    const savedLanguage = window.localStorage.getItem('surfare-language');
+    return LANGUAGES.includes(savedLanguage) ? savedLanguage : 'en';
+  } catch {
+    return 'en';
+  }
 }
 
 function demoResult(scenario, checkedText) {
@@ -137,11 +143,14 @@ function demoResult(scenario, checkedText) {
 
 export default function App() {
   useScrollReveal();
+  useFluidMotion();
+  const { hasAcknowledged, requestAcknowledgment } = usePrivacyNotice();
   const [lang, setLang] = useState(useInitialLanguage);
   const t = useCallback((key, values) => translate(lang, key, values), [lang]);
-  const [isOnline, setIsOnline] = useState(() => navigator.onLine);
+  const isOnline = useConnectionStatus();
   const [activeTab, setActiveTab] = useState('text');
   const [offlineOnly, setOfflineOnly] = useState(true);
+  useEffect(() => { if (!hasAcknowledged) setOfflineOnly(true); }, [hasAcknowledged]);
   const [inputs, setInputs] = useState({
     message: '',
     url: '',
@@ -174,50 +183,9 @@ export default function App() {
     window.clearTimeout(askAnswerTimer.current);
   }, []);
 
-  useEffect(() => {
-    let active = true;
-    const checkNetwork = async () => {
-      if (!navigator.onLine) {
-        setIsOnline(false);
-        return;
-      }
-      const workerUrl = import.meta.env.VITE_WORKER_URL;
-      if (!workerUrl) {
-        setIsOnline(true);
-        return;
-      }
-      const controller = new AbortController();
-      const timeout = window.setTimeout(() => controller.abort(), 2500);
-      try {
-        const response = await fetch(`${workerUrl.replace(/\/$/, '')}/health`, {
-          signal: controller.signal,
-          cache: 'no-store',
-        });
-        if (active) setIsOnline(response.ok);
-      } catch {
-        if (active) setIsOnline(false);
-      } finally {
-        window.clearTimeout(timeout);
-      }
-    };
-    const updateNetwork = () => {
-      if (!navigator.onLine) setIsOnline(false);
-      else void checkNetwork();
-    };
-    void checkNetwork();
-    window.addEventListener('online', updateNetwork);
-    window.addEventListener('offline', updateNetwork);
-    const intervalId = window.setInterval(checkNetwork, 60_000);
-    return () => {
-      active = false;
-      window.clearInterval(intervalId);
-      window.removeEventListener('online', updateNetwork);
-      window.removeEventListener('offline', updateNetwork);
-    };
-  }, []);
 
   useEffect(() => {
-    window.localStorage.setItem('surfare-language', lang);
+    try { window.localStorage.setItem('surfare-language', lang); } catch { /* Keep the language for this session. */ }
     document.documentElement.lang = htmlLanguage(lang);
   }, [lang]);
 
@@ -286,6 +254,7 @@ export default function App() {
   }, []);
 
   const handleCheck = async () => {
+    if (!await requestAcknowledgment()) return;
     if (checkUsedRef.current) return;
     checkUsedRef.current = true;
     setIsCheckUsed(true);
@@ -371,29 +340,11 @@ export default function App() {
     scheduleAskAnswer();
   }, [result, scheduleAskAnswer, t]);
 
-  const openSurfy = useCallback(() => {
-    window.clearTimeout(askOpenTimer.current);
-    setIsAskClosing(false);
-    setIsAskOpen(true);
-    setSurfyOpenRequest((current) => current + 1);
-    window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
-      const panel = document.querySelector('.ask-panel-position');
-      const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 56;
-      const dockHeight = document.querySelector('.bottom-shortcuts')?.getBoundingClientRect().height ?? 80;
-      const tall = panel && panel.getBoundingClientRect().height > innerHeight - headerHeight - dockHeight - 40;
-      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
-      if (tall) {
-        const form = panel.querySelector('.ask-form').getBoundingClientRect();
-        const dockTop = document.querySelector('.bottom-shortcuts')?.getBoundingClientRect().top ?? innerHeight - 96;
-        window.scrollTo({ top: Math.max(0, window.scrollY + form.bottom - dockTop + 20), behavior });
-      } else panel?.scrollIntoView({ block: 'center', behavior });
-    }));
-  }, []);
-
-  const openFeedback = useCallback((type = activeTab) => {
+  const openFeedback = useCallback(async (type = activeTab) => {
+    if (!await requestAcknowledgment()) return;
     setFeedbackType(type);
     setIsFeedbackOpen(true);
-  }, [activeTab]);
+  }, [activeTab, requestAcknowledgment]);
   const handleNewCheck = useCallback(() => {
     if (status === 'result') {
       const previousTab = activeTab;
@@ -442,7 +393,7 @@ export default function App() {
           onInputChange={updateInput}
           onCheck={handleCheck}
           onReset={handleNewCheck}
-          onCamera={setCameraTarget}
+          onCamera={async (target) => { if (await requestAcknowledgment()) setCameraTarget(target); }}
           isAnalyzing={status === 'analyzing'}
           isCheckUsed={isCheckUsed}
           status={status}
@@ -474,8 +425,6 @@ export default function App() {
         <RiskLevels t={t} />
       </main>
       <Footer t={t} />
-      <BottomShortcuts t={t} onOpenSurfy={openSurfy} onOpenFeedback={openFeedback}
-        isModalOpen={isFeedbackOpen || Boolean(cameraTarget)} />
       {camera}
     </div>
     </WelcomeExperience>

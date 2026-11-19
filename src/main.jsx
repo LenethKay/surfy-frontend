@@ -4,6 +4,8 @@ import '@fontsource-variable/fraunces';
 import '@fontsource-variable/outfit';
 import './index.css';
 import App from './App.jsx';
+import { PrivacyProvider } from './privacy/PrivacyContext.jsx';
+import './motion.css';
 
 // Start each page load at the hero instead of restoring a previous section.
 if ('scrollRestoration' in window.history) {
@@ -18,6 +20,6 @@ window.addEventListener('pageshow', startAtTop);
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <PrivacyProvider><App /></PrivacyProvider>
   </React.StrictMode>,
 );

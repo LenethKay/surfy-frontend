@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
-import { ChevronDown, ChevronUp, Lock } from 'lucide-react';
+import { ChevronDown, Link2, Lock, MessageSquareText, ScanLine } from 'lucide-react';
 import { ASSETS } from '../assets.js';
+import './PrivacyCard.css';
 
 const LEVELS = [
   { key: 'low', mascot: ASSETS.surfyWink },
@@ -42,13 +43,13 @@ export default function RiskLevels({ t }) {
           ))}
         </div>
 
-        <article className="privacy-card" id="privacy">
+        <article className="privacy-card" id="privacy" aria-labelledby={`${privacyPanelId}-title`}>
           <div className="privacy-heading">
             <span className="privacy-icon">
               <Lock aria-hidden="true" size={28} strokeWidth={2} />
             </span>
             <div>
-              <h3>{t('privacy.title')}</h3>
+              <h3 id={`${privacyPanelId}-title`}>{t('privacy.title')}</h3>
               <p>{t('privacy.body')}</p>
             </div>
           </div>
@@ -60,16 +61,12 @@ export default function RiskLevels({ t }) {
             onClick={() => setIsPrivacyOpen((open) => !open)}
           >
             <span>{t('privacy.question')}</span>
-            {isPrivacyOpen ? (
-              <ChevronUp aria-hidden="true" size={20} strokeWidth={1.8} />
-            ) : (
-              <ChevronDown aria-hidden="true" size={20} strokeWidth={1.8} />
-            )}
+            <ChevronDown aria-hidden="true" size={18} strokeWidth={1.8} />
           </button>
           <div className="privacy-details" id={privacyPanelId} hidden={!isPrivacyOpen}>
-            <p>{t('privacy.links')}</p>
-            <p>{t('privacy.text')}</p>
-            <p>{t('privacy.image')}</p>
+            <div className="privacy-detail"><Link2 aria-hidden="true" size={21} /><p>{t('privacy.links')}</p></div>
+            <div className="privacy-detail"><MessageSquareText aria-hidden="true" size={21} /><p>{t('privacy.text')}</p></div>
+            <div className="privacy-detail"><ScanLine aria-hidden="true" size={21} /><p>{t('privacy.image')}</p></div>
           </div>
         </article>
       </div>

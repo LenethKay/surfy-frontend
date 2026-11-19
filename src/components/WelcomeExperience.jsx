@@ -3,6 +3,9 @@ import {
 } from 'react';
 import { ChevronLeft, Pause, Play, X } from 'lucide-react';
 import { ASSETS } from '../assets.js';
+import { advanceSpring, scrollDamping } from '../motion/spring.js';
+import { usePrivacyNotice } from '../privacy/PrivacyContext.jsx';
+import PrivacyNotice from './PrivacyNotice.jsx';
 import './WelcomeExperience.css';
 
 const TourContext = createContext(() => {});
@@ -28,6 +31,8 @@ function GuideCursor({ cursorRef, className = '' }) {
 }
 
 export default function WelcomeExperience({ children, t }) {
+  const { notice, hasAcknowledged, requestAcknowledgment } = usePrivacyNotice();
+  const initialPrivacyRequested = useRef(false);
   const [phase, setPhase] = useState('intro');
   const [tourActive, setTourActive] = useState(false);
   const [tourClosing, setTourClosing] = useState(false);
@@ -50,15 +55,24 @@ export default function WelcomeExperience({ children, t }) {
   const goalRef = useRef({ x: 16, y: 80 });
   const pointerRef = useRef(null);
   const pointerTravelRef = useRef(null);
+  const scrollTravelRef = useRef(null);
   const connectorRef = useRef(null);
   const dockRef = useRef(null);
   const pageRef = useRef(null);
   const focusReturnRef = useRef(null);
   const runTourAfterIntro = useRef(true);
   const currentStep = STEPS[step];
-  const isPaused = paused || interacting || pageHidden || tourClosing;
+  const isPaused = paused || interacting || pageHidden || tourClosing || Boolean(notice);
 
-  const startTour = useCallback(() => {
+  useEffect(() => {
+    if (!hasAcknowledged) {
+      setTourActive(false);
+      setInvitePhase('hidden');
+    }
+  }, [hasAcknowledged]);
+
+  const startTour = useCallback(async () => {
+    if (!await requestAcknowledgment()) return;
     focusReturnRef.current = document.activeElement;
     setStep(0);
     setPaused(reduced);
@@ -66,9 +80,10 @@ export default function WelcomeExperience({ children, t }) {
     setTourClosing(false);
     travelRef.current = null;
     pointerTravelRef.current = null;
+    scrollTravelRef.current = null;
     window.scrollTo({ top: 0, behavior: 'instant' });
     setTourActive(true);
-  }, [reduced]);
+  }, [reduced, requestAcknowledgment]);
 
   const finishIntro = useCallback((withTour = true) => {
     runTourAfterIntro.current = withTour;
@@ -178,10 +193,17 @@ export default function WelcomeExperience({ children, t }) {
     if (phase !== 'opening') return undefined;
     const timer = window.setTimeout(() => {
       setPhase('ready');
-      if (runTourAfterIntro.current) setInvitePhase('open');
     }, reduced ? 0 : 600);
     return () => window.clearTimeout(timer);
   }, [phase, reduced, startTour]);
+
+  useEffect(() => {
+    if (phase !== 'ready' || initialPrivacyRequested.current) return;
+    initialPrivacyRequested.current = true;
+    void requestAcknowledgment().then((accepted) => {
+      if (accepted && runTourAfterIntro.current) setInvitePhase('open');
+    });
+  }, [phase, requestAcknowledgment]);
 
   useLayoutEffect(() => {
     if (!tourActive) return undefined;
@@ -218,7 +240,10 @@ export default function WelcomeExperience({ children, t }) {
   };
 
   useEffect(() => {
-    if (!tourActive || tourClosing) return undefined;
+    if (!tourActive || tourClosing || notice) {
+      scrollTravelRef.current = null;
+      return undefined;
+    }
     const target = pageRef.current.querySelector(currentStep.target);
     if (!target) { finishTour(); return undefined; }
     target.dataset.tourFocus = 'true';
@@ -267,27 +292,51 @@ export default function WelcomeExperience({ children, t }) {
       }
       if (best) {
         goalRef.current = {x:best.x,y:best.y};
-        window.scrollTo({ top: best.scroll, behavior: reduced ? 'instant' : 'smooth' });
+        if (reduced) {
+          window.scrollTo({ top: best.scroll, behavior: 'instant' });
+          scrollTravelRef.current = null;
+        } else {
+          const previous = scrollTravelRef.current;
+          scrollTravelRef.current = {
+            position: previous?.position ?? window.scrollY,
+            velocity: previous?.velocity ?? 0,
+            target: best.scroll,
+            damping: previous && Math.abs(previous.target - best.scroll) < 1
+              ? previous.damping : scrollDamping(best.scroll - window.scrollY),
+          };
+        }
       }
     };
     reflow();
-    const settleTimer = window.setTimeout(reflow, reduced ? 0 : 950);
+    const settleTimer = window.setTimeout(reflow, reduced ? 0 : 1200);
     let frameId;
     let lastTime;
     const draw = (now) => {
       const card = dockRef.current;
       const { x:goalX, y:goalY } = goalRef.current;
-      const dt = Math.min(32, now - (lastTime ?? now));
-      const ease = reduced ? 1 : 1 - Math.exp(-dt / 95);
+      const dt = Math.min(32, now - (lastTime ?? now)) / 1000;
+      const scroll = scrollTravelRef.current;
+      if (scroll && !reduced) {
+        const next = advanceSpring(scroll.position, scroll.velocity, scroll.target, dt, scroll.damping);
+        const maxScroll = Math.max(0, document.documentElement.scrollHeight - innerHeight);
+        const position = Math.max(0, Math.min(maxScroll, next.position));
+        scrollTravelRef.current = { ...scroll, position, velocity: position === next.position ? next.velocity : 0 };
+        // Native smooth scrolling cannot overshoot. Drive the real scroll
+        // position so the sticky header and tour pointer stay in sync.
+        if (Math.abs(window.scrollY - position) > .1) window.scrollTo({ top: position, behavior: 'instant' });
+      }
       const old = travelRef.current ?? { x: goalX + (reduced ? 0 : 24), y: goalY + (reduced ? 0 : 16) };
-      const x = old.x + (goalX - old.x) * ease;
-      const y = old.y + (goalY - old.y) * ease;
+      const nextX = reduced ? { position: goalX, velocity: 0 } : advanceSpring(old.x, old.vx ?? 0, goalX, dt);
+      const nextY = reduced ? { position: goalY, velocity: 0 } : advanceSpring(old.y, old.vy ?? 0, goalY, dt);
+      const x = nextX.position;
+      const y = nextY.position;
+      const speed = Math.hypot(nextX.velocity, nextY.velocity);
       const distance = Math.hypot(goalX - x, goalY - y);
       card.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0)';
-      card.style.filter = reduced ? 'none' : 'blur(' + Math.min(2, distance * .018) + 'px)';
+      card.style.filter = reduced ? 'none' : 'blur(' + Math.min(2, speed * .003) + 'px)';
       card.style.opacity = '1';
-      card.dataset.travelling = distance > 4 ? 'true' : 'false';
-      travelRef.current = { x, y };
+      card.dataset.travelling = distance > 4 || speed > 24 ? 'true' : 'false';
+      travelRef.current = { x, y, vx: nextX.velocity, vy: nextY.velocity };
       const pointedElement = currentStep.point ? pageRef.current.querySelector(currentStep.point) : target;
       let targetRect = pointedElement.getBoundingClientRect();
       if (currentStep.text) {
@@ -300,9 +349,11 @@ export default function WelcomeExperience({ children, t }) {
       const tipX = currentStep.text ? targetRect.right - 3 : targetRect.right - Math.min(16, targetRect.width / 4);
       const tipY = currentStep.text ? targetRect.bottom - 4 : targetRect.top + Math.min(14, targetRect.height / 3);
       const previousTip = pointerTravelRef.current ?? { x: tipX, y: tipY };
-      const px = previousTip.x + (tipX - previousTip.x) * ease;
-      const py = previousTip.y + (tipY - previousTip.y) * ease;
-      pointerTravelRef.current = { x: px, y: py };
+      const nextTipX = reduced ? { position: tipX, velocity: 0 } : advanceSpring(previousTip.x, previousTip.vx ?? 0, tipX, dt);
+      const nextTipY = reduced ? { position: tipY, velocity: 0 } : advanceSpring(previousTip.y, previousTip.vy ?? 0, tipY, dt);
+      const px = nextTipX.position;
+      const py = nextTipY.position;
+      pointerTravelRef.current = { x: px, y: py, vx: nextTipX.velocity, vy: nextTipY.velocity };
       pointerRef.current.style.transform = `translate3d(${px - 3}px, ${py - 2}px, 0)`;
       pointerRef.current.style.opacity = targetRect.bottom > 0 && targetRect.top < innerHeight ? '1' : '0';
       const startX = x + 40;
@@ -321,7 +372,7 @@ export default function WelcomeExperience({ children, t }) {
       window.removeEventListener('resize', reflow);
       window.visualViewport?.removeEventListener('resize', reflow);
     };
-  }, [tourActive, tourClosing, currentStep, step, dockHeight, cardWidth, reduced, finishTour, t]);
+  }, [tourActive, tourClosing, notice, currentStep, step, dockHeight, cardWidth, reduced, finishTour, t]);
 
   useEffect(() => {
     if (!tourActive || isPaused) return undefined;
@@ -360,6 +411,7 @@ export default function WelcomeExperience({ children, t }) {
     <TourContext.Provider value={startTour}>
       <div className={`site-experience is-${phase}${tourActive ? ' is-touring' : ''}${tourClosing ? ' is-tour-closing' : ''}`} style={{ '--tour-space': `${dockHeight}px`, '--tour-width': `${cardWidth}px` }}>
         <div className="experience-page" ref={pageRef}>{children}</div>
+        {notice && <PrivacyNotice t={t} reduced={reduced} key={`${notice}-${hasAcknowledged}`} />}
         {phase !== 'ready' && (
           <dialog className={`surfare-intro${phase === 'opening' ? ' is-opening' : ''}`} ref={dialogRef}
             tabIndex={-1} aria-labelledby="intro-title" onCancel={(event) => { event.preventDefault(); finishIntro(false); }}>
