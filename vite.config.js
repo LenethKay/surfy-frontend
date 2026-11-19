@@ -12,7 +12,6 @@ export default defineConfig({
       manifest: {
         name: 'Surfare',
         short_name: 'Surfare',
-        description: 'Your digital safety assistant.',
         theme_color: '#0B2A6F',
         background_color: '#FAF3E8',
         display: 'standalone',
